@@ -82,17 +82,26 @@ task("updateReadme") {
         val releaseVariant = android.applicationVariants.first { it.name == "release" }
         val releaseFiles = releaseVariant.outputs.map { it.outputFile }
         val apkFile = releaseFiles.single { it.exists() && it.extension == "apk" }
+        val defaultConfig = android.defaultConfig
         val properties = mapOf(
             "apkSize" to "%.2f".format(apkFile.length().toFloat() / 1024 / 1024),
-            "appVersion" to android.defaultConfig.versionName.orEmpty(),
-            "appPackage" to android.defaultConfig.applicationId.orEmpty(),
-            "minSdkVersion" to android.defaultConfig.minSdkVersion?.apiLevel?.toString().orEmpty()
+            "applicationId" to defaultConfig.applicationId,
+            "versionName" to defaultConfig.versionName,
+            "versionCode" to defaultConfig.versionCode?.toString(),
+            "minSdkVersion" to defaultConfig.minSdkVersion?.apiLevel?.toString(),
+            "targetSdkVersion" to defaultConfig.targetSdkVersion?.apiLevel?.toString(),
+            "repository" to "sirekanyan/knigopis"
         )
+        properties.forEach { (key, value) ->
+            if (value.isNullOrBlank()) {
+                logger.warn("Readme property '$key' is empty")
+            }
+        }
         rootProject.file("README.md").printWriter().use { readme ->
             rootProject.file("readme.md").forEachLine { inputLine ->
                 readme.appendln(
                     properties.entries.fold(inputLine) { line, (key, value) ->
-                        line.replace("{{$key}}", value)
+                        line.replace("{{$key}}", value.orEmpty())
                     }
                 )
             }
