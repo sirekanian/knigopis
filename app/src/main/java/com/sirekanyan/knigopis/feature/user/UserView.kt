@@ -68,7 +68,6 @@ class UserViewImpl(
 
     override fun setImage(url: String?) {
         userImage.setCircleImageOnPrimary(url)
-        userImage.setElevationRes(R.dimen.image_view_elevation)
     }
 
     override fun setBooks(books: List<BookModel>) {

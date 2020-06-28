@@ -1,8 +1,6 @@
 package com.sirekanyan.knigopis.common.extensions
 
 import android.view.View
-import androidx.annotation.DimenRes
-import androidx.core.view.ViewCompat
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
 
@@ -32,10 +30,6 @@ fun View.show() {
 fun View.hide() {
     animate().alpha(0f).setDuration(200)
         .withEndAction { visibility = View.GONE }
-}
-
-fun View.setElevationRes(@DimenRes elevation: Int) {
-    ViewCompat.setElevation(this, resources.getDimensionPixelSize(elevation).toFloat())
 }
 
 fun View.startExpandAnimation() {
