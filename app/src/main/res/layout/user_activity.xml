@@ -7,7 +7,7 @@
     tools:context=".feature.user.UserActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@id/user_app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:elevation="@dimen/app_bar_elevation">
@@ -45,14 +45,7 @@
         android:layout_marginTop="56dp"
         android:layout_marginRight="16dp"
         android:elevation="@dimen/app_bar_elevation"
-        app:appBarLayout="@+id/app_bar"
-        app:appBarMaxHeight="@dimen/app_bar_height"
-        app:appBarMinHeight="@dimen/toolbar_height"
         app:layout_behavior="com.sirekanyan.knigopis.feature.user.behavior.SimpleBehavior"
-        app:toHeight="40dp"
-        app:toWidth="40dp"
-        app:toX="64dp"
-        app:toY="8dp"
         tools:ignore="ContentDescription"
         tools:src="@drawable/oval_placeholder_on_primary" />
 
@@ -87,7 +80,7 @@
         android:src="@drawable/ic_person_add"
         android:visibility="gone"
         app:backgroundTint="@drawable/subscribe_button_background"
-        app:layout_anchor="@id/app_bar"
+        app:layout_anchor="@id/user_app_bar"
         app:layout_anchorGravity="bottom|end" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

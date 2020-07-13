@@ -11,4 +11,6 @@
     <item name="option_sort_users_by_count" type="id" />
     <item name="option_sort_users_by_new_count" type="id" />
 
+    <item name="user_app_bar" type="id" />
+
 </resources>

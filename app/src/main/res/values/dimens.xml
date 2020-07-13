@@ -12,6 +12,10 @@
     <dimen name="avatar_size_expanded">88dp</dimen>
     <dimen name="toolbar_height">56dp</dimen>
     <dimen name="app_bar_height">160dp</dimen>
+    <dimen name="avatar_target_height">40dp</dimen>
+    <dimen name="avatar_target_width">40dp</dimen>
+    <dimen name="avatar_target_x">64dp</dimen>
+    <dimen name="avatar_target_y">8dp</dimen>
     <dimen name="app_bar_elevation">4dp</dimen>
     <dimen name="swipe_refresh_start_offset">36dp</dimen>
     <dimen name="swipe_refresh_end_offset">80dp</dimen>

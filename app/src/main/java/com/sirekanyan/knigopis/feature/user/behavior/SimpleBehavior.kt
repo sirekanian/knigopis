@@ -4,7 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import com.sirekanyan.knigopis.R.styleable.*
+import com.sirekanyan.knigopis.R
+import kotlin.math.abs
+import kotlin.math.min
 
 @Suppress("unused")
 class SimpleBehavior(
@@ -12,25 +14,17 @@ class SimpleBehavior(
     attrs: AttributeSet
 ) : CoordinatorLayout.Behavior<View>(context, attrs) {
 
-    private val dependViewId: Int
-    private val endState: SimpleViewState
-    private val minHeight: Int
-    private val maxHeight: Int
+    private val dependViewId = R.id.user_app_bar
+    private val resources = context.resources
+    private val endState = SimpleViewState(
+        resources.getDimensionPixelOffset(R.dimen.avatar_target_x),
+        resources.getDimensionPixelOffset(R.dimen.avatar_target_y),
+        resources.getDimensionPixelOffset(R.dimen.avatar_target_width),
+        resources.getDimensionPixelOffset(R.dimen.avatar_target_height)
+    )
+    private val minHeight = resources.getDimensionPixelOffset(R.dimen.toolbar_height)
+    private val maxHeight = resources.getDimensionPixelOffset(R.dimen.app_bar_height)
     private var behaviorHelper: BehaviorHelper? = null
-
-    init {
-        val a = context.obtainStyledAttributes(attrs, ViewBehavior)
-        dependViewId = a.getResourceId(ViewBehavior_appBarLayout, 0)
-        maxHeight = a.getDimensionPixelOffset(ViewBehavior_appBarMaxHeight, 0)
-        minHeight = a.getDimensionPixelOffset(ViewBehavior_appBarMinHeight, 0)
-        endState = SimpleViewState(
-            a.getDimensionPixelOffset(ViewBehavior_toX, 0),
-            a.getDimensionPixelOffset(ViewBehavior_toY, 0),
-            a.getDimensionPixelOffset(ViewBehavior_toWidth, 0),
-            a.getDimensionPixelOffset(ViewBehavior_toHeight, 0)
-        )
-        a.recycle()
-    }
 
     override fun layoutDependsOn(parent: CoordinatorLayout, child: View, dependency: View) =
         dependency.id == dependViewId
@@ -40,8 +34,8 @@ class SimpleBehavior(
         child: View,
         dependency: View
     ): Boolean {
-        val ratio = Math.abs(dependency.y) / (maxHeight - minHeight)
-        getHelper(child.simpleState).updateDimensions(child, Math.min(1f, ratio))
+        val ratio = abs(dependency.y) / (maxHeight - minHeight)
+        getHelper(child.simpleState).updateDimensions(child, min(1f, ratio))
         return false
     }
 

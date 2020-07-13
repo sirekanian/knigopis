@@ -10,7 +10,7 @@ val View.simpleState
         height
     )
 
-class BehaviorHelper(val start: SimpleViewState, val end: SimpleViewState) {
+class BehaviorHelper(private val start: SimpleViewState, private val end: SimpleViewState) {
 
     fun updateDimensions(child: View, ratio: Float) {
         val dW = (end.width - start.width) * ratio
@@ -20,4 +20,5 @@ class BehaviorHelper(val start: SimpleViewState, val end: SimpleViewState) {
         child.translationX = (end.x - start.x) * ratio + dW / 2
         child.translationY = (end.y - start.y) * ratio + dH / 2
     }
+
 }
