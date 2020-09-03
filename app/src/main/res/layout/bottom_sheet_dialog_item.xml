@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="48dp"
@@ -12,8 +13,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_gravity="center_vertical"
-        android:tint="?android:textColorSecondary"
-        android:tintMode="src_in"
+        app:tint="?android:textColorSecondary"
         tools:ignore="ContentDescription"
         tools:src="@drawable/ic_edit" />
 
