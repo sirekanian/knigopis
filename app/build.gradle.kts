@@ -45,9 +45,6 @@ android {
 }
 
 dependencies {
-    // kotlin standard library
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72")
-
     // androidx libraries
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
