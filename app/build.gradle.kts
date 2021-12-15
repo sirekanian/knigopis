@@ -18,11 +18,9 @@ android {
         versionCode = 31
         versionName = "0.3.4"
         setProperty("archivesBaseName", "$applicationId-$versionName-$versionCode")
-        manifestPlaceholders = mapOf(
-            "LOGIN_CALLBACK_SCHEME" to "e270636c0efc6cad95130113d3bbafc3",
-            "LOGIN_CALLBACK_HOST" to "532b8e7fc54c52b6df5b55181acc241a",
-            "LOGIN_CALLBACK_PATH" to "$versionCode"
-        )
+        manifestPlaceholders["LOGIN_CALLBACK_SCHEME"] = "e270636c0efc6cad95130113d3bbafc3"
+        manifestPlaceholders["LOGIN_CALLBACK_HOST"] = "532b8e7fc54c52b6df5b55181acc241a"
+        manifestPlaceholders["LOGIN_CALLBACK_PATH"] = "$versionCode"
         manifestPlaceholders.forEach { (key, value) ->
             buildConfigField("String", key, "\"$value\"")
         }
@@ -96,7 +94,7 @@ task("updateReadme") {
         }
         rootProject.file("README.md").printWriter().use { readme ->
             rootProject.file("readme.md").forEachLine { inputLine ->
-                readme.appendln(
+                readme.appendLine(
                     properties.entries.fold(inputLine) { line, (key, value) ->
                         line.replace("{{$key}}", value.orEmpty())
                     }
