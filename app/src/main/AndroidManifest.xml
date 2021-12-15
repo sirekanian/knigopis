@@ -18,6 +18,7 @@
 
         <activity
             android:name=".feature.MainActivity"
+            android:exported="true"
             android:label="@string/common.title.app"
             android:launchMode="singleTop"
             android:theme="@style/Theme.Knigopis.Splash">
@@ -57,7 +58,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Knigopis.Profile" />
 
-        <activity android:name=".feature.login.LoginActivity">
+        <activity
+            android:name=".feature.login.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
