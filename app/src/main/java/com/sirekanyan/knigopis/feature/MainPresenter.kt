@@ -144,7 +144,7 @@ class MainPresenterImpl(
     override fun onCrashReportOptionClicked(isChecked: Boolean) {
         config.crashReportEnabled = isChecked
         if (!isChecked) {
-            ACRA.getErrorReporter().handleException(Exception("Crash reporting was disabled"))
+            ACRA.errorReporter.handleException(Exception("Crash reporting was disabled"))
         }
     }
 

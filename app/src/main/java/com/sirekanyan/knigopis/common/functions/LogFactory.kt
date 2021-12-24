@@ -9,6 +9,6 @@ private const val TAG = "Knigopis"
 fun logWarn(message: String) = Log.w(TAG, message)
 
 fun logError(message: String, throwable: Throwable?): Int {
-    ACRA.getErrorReporter().handleException(throwable)
+    ACRA.errorReporter.handleException(throwable)
     return Log.e(TAG, message, throwable)
 }

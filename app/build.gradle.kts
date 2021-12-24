@@ -67,7 +67,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.11.0")
 
     // crash reporting
-    implementation("ch.acra:acra-http:5.1.3")
+    implementation("ch.acra:acra-http:5.8.4")
 }
 
 task("updateReadme") {
