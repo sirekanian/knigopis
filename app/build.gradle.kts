@@ -44,12 +44,12 @@ android {
 dependencies {
     // androidx libraries
     implementation("androidx.appcompat:appcompat:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-    implementation("androidx.browser:browser:1.2.0")
+    implementation("androidx.browser:browser:1.4.0")
 
     // rxjava
-    implementation("io.reactivex.rxjava2:rxjava:2.2.19")
+    implementation("io.reactivex.rxjava2:rxjava:2.2.21")
     implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
 
@@ -64,7 +64,7 @@ dependencies {
 
     // etc
     implementation("com.google.android.material:material:1.4.0")
-    implementation("com.github.bumptech.glide:glide:4.11.0")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
 
     // crash reporting
     implementation("ch.acra:acra-http:5.8.4")
