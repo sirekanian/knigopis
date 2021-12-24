@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.Intent.*
 import android.net.Uri
 import android.os.Bundle
+import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.BaseActivity
 import com.sirekanyan.knigopis.common.extensions.app
@@ -23,8 +24,6 @@ import com.sirekanyan.knigopis.feature.users.UsersPresenter
 import com.sirekanyan.knigopis.feature.users.getMainState
 import com.sirekanyan.knigopis.feature.users.saveMainState
 import com.sirekanyan.knigopis.model.*
-
-private const val BOOK_REQUEST_CODE = 1
 
 fun Context.startMainActivity() {
     startActivity(
@@ -83,14 +82,9 @@ class MainActivity : BaseActivity(),
         presenter.state?.let { outState.saveMainState(it) }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        when (requestCode) {
-            BOOK_REQUEST_CODE -> {
-                if (resultCode == RESULT_OK) {
-                    presenter.onBookScreenResult()
-                }
-            }
+    private val resultLauncher = registerForActivityResult(StartActivityForResult()) { result ->
+        if (result.resultCode == RESULT_OK) {
+            presenter.onBookScreenResult()
         }
     }
 
@@ -109,11 +103,11 @@ class MainActivity : BaseActivity(),
     }
 
     override fun openNewBookScreen() {
-        startActivityForResult(createBookIntent(EMPTY_BOOK), BOOK_REQUEST_CODE)
+        resultLauncher.launch(createBookIntent(EMPTY_BOOK))
     }
 
     override fun openBookScreen(book: BookDataModel) {
-        startActivityForResult(createBookIntent(book.toEditModel()), BOOK_REQUEST_CODE)
+        resultLauncher.launch(createBookIntent(book.toEditModel()))
     }
 
     override fun openUserScreen(user: UserModel) {
