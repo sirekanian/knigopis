@@ -148,13 +148,13 @@ class MainViewImpl(
     override fun showNavigation(isVisible: Boolean) {
         if (isVisible) {
             bottomNavigation.show()
-            bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            bottomNavigation.setOnItemSelectedListener { item ->
                 callbacks.onNavigationClicked(item.itemId)
                 true
             }
         } else {
             bottomNavigation.hide()
-            bottomNavigation.setOnNavigationItemSelectedListener(null)
+            bottomNavigation.setOnItemSelectedListener(null)
         }
     }
 
