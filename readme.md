@@ -1,7 +1,7 @@
 # Knigopis {{versionName}}
 Android app for [knigopis.com](https://www.knigopis.com)
 
-[![Build Status](https://travis-ci.org/{{repository}}.svg?branch=master)](https://travis-ci.org/{{repository}})
+[![Build Status](https://travis-ci.com/{{repository}}.svg?branch=master)](https://travis-ci.org/{{repository}})
 [![APK Size](https://img.shields.io/badge/apk-{{apkSize}}%20MB-blue.svg)](https://github.com/{{repository}}/releases/download/v{{versionName}}/{{applicationId}}-{{versionName}}-{{versionCode}}-release-unsigned.apk)
 [![Minimum API Level](https://img.shields.io/badge/min%20sdk-{{minSdkVersion}}-brightgreen.svg)](https://source.android.com/setup/start/build-numbers)
 [![Target API Level](https://img.shields.io/badge/target%20sdk-{{targetSdkVersion}}-brightgreen.svg)](https://source.android.com/setup/start/build-numbers)

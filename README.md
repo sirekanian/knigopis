@@ -1,10 +1,10 @@
-# Knigopis 0.3.4
+# Knigopis 1.0.0
 Android app for [knigopis.com](https://www.knigopis.com)
 
-[![Build Status](https://travis-ci.org/sirekanyan/knigopis.svg?branch=master)](https://travis-ci.org/sirekanyan/knigopis)
-[![APK Size](https://img.shields.io/badge/apk-2.18%20MB-blue.svg)](https://github.com/sirekanyan/knigopis/releases/download/v0.3.4/com.sirekanyan.knigopis-0.3.4-31-release-unsigned.apk)
+[![Build Status](https://travis-ci.com/sirekanyan/knigopis.svg?branch=master)](https://travis-ci.org/sirekanyan/knigopis)
+[![APK Size](https://img.shields.io/badge/apk-2.51%20MB-blue.svg)](https://github.com/sirekanyan/knigopis/releases/download/v1.0.0/com.sirekanyan.knigopis-1.0.0-32-release-unsigned.apk)
 [![Minimum API Level](https://img.shields.io/badge/min%20sdk-21-brightgreen.svg)](https://source.android.com/setup/start/build-numbers)
-[![Target API Level](https://img.shields.io/badge/target%20sdk-29-brightgreen.svg)](https://source.android.com/setup/start/build-numbers)
+[![Target API Level](https://img.shields.io/badge/target%20sdk-31-brightgreen.svg)](https://source.android.com/setup/start/build-numbers)
 [![Get it on F-Droid](https://img.shields.io/f-droid/v/com.sirekanyan.knigopis.svg)](https://f-droid.org/en/packages/com.sirekanyan.knigopis/)
 [![Get it on GitHub](https://img.shields.io/github/release/sirekanyan/knigopis.svg)](https://github.com/sirekanyan/knigopis/releases/latest)
 
