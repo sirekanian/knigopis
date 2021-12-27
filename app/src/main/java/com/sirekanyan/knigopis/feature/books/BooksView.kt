@@ -7,7 +7,6 @@ import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
 import com.sirekanyan.knigopis.common.android.dialog.createDialogItem
 import com.sirekanyan.knigopis.common.android.header.HeaderItemDecoration
 import com.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
-import com.sirekanyan.knigopis.common.android.recycler.BottomOffsetItemDecoration
 import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.*
 import com.sirekanyan.knigopis.common.functions.handleError
@@ -48,7 +47,6 @@ class BooksViewImpl(
     init {
         booksRecyclerView.adapter = booksAdapter
         booksRecyclerView.addItemDecoration(HeaderItemDecoration(StickyHeaderImpl(booksAdapter)))
-        booksRecyclerView.addItemDecoration(BottomOffsetItemDecoration(context))
         booksRecyclerView.addOnScrollListener(FabOnScrollListener(resources, addBookButton))
         addBookButton.setOnClickListener { callbacks.onAddBookClicked() }
     }
