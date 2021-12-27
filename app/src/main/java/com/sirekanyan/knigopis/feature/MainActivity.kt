@@ -1,5 +1,6 @@
 package com.sirekanyan.knigopis.feature
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.*
@@ -11,7 +12,6 @@ import com.sirekanyan.knigopis.common.BaseActivity
 import com.sirekanyan.knigopis.common.extensions.app
 import com.sirekanyan.knigopis.common.extensions.io2main
 import com.sirekanyan.knigopis.common.extensions.showToast
-import com.sirekanyan.knigopis.common.extensions.startActivityOrNull
 import com.sirekanyan.knigopis.common.functions.logError
 import com.sirekanyan.knigopis.dependency.providePresenter
 import com.sirekanyan.knigopis.feature.book.createBookIntent
@@ -123,7 +123,11 @@ class MainActivity : BaseActivity(),
     }
 
     override fun openWebPage(uri: Uri) {
-        startActivityOrNull(Intent(ACTION_VIEW, uri)) ?: showToast(R.string.users_info_no_browser)
+        try {
+            startActivity(Intent(ACTION_VIEW, uri))
+        } catch (ex: ActivityNotFoundException) {
+            showToast(R.string.users_info_no_browser)
+        }
     }
 
 }
