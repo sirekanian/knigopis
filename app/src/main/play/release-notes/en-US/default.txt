@@ -1,3 +1,9 @@
+v1.0.1
+- Minor bugfixes
+
+v1.0.0
+- No changes
+
 v0.3.4
 - Added ability to sort your subscriptions
 - Other improvements and fixes
@@ -7,11 +13,9 @@ v0.3.3
 
 v0.3.2
 - Added crash reporting (disabled by default)
-- Minor bugfixes
 
 v0.3.1
 - Better dark theme
-- Minor bugfixes
 
 v0.3.0
 - Auhtorization rework, removed closed-source libraries
