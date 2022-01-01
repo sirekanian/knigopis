@@ -10,8 +10,6 @@ private val HTTP_SCHEMES = setOf("http", "https")
 
 val String.lowercase get() = lowercase(Locale.getDefault())
 
-fun String.orDefault(default: String) = if (isEmpty()) default else this
-
 fun String.toUriOrNull() =
     Uri.parse(this).takeIf(Uri::isValidHttpLink)
 
