@@ -9,11 +9,11 @@ androidExtensions {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 33
     defaultConfig {
         applicationId = "com.sirekanyan.knigopis"
         minSdk = 21
-        targetSdk = 31
+        targetSdk = 33
         versionCode = (property("appVersionCode") as String).toInt()
         versionName = property("appVersionName") as String
         setProperty("archivesBaseName", "$applicationId-$versionName-$versionCode")
