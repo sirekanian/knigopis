@@ -9,6 +9,7 @@ androidExtensions {
 }
 
 android {
+    namespace = "com.sirekanyan.knigopis"
     compileSdk = 33
     defaultConfig {
         applicationId = "com.sirekanyan.knigopis"

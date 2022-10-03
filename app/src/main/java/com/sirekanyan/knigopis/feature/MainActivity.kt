@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.Intent.*
 import android.net.Uri
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
 import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.BaseActivity
@@ -40,6 +41,13 @@ class MainActivity : BaseActivity(),
 
     private val presenter by lazy { providePresenter() }
     private val api by lazy { app.endpoint }
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            if (!presenter.back()) {
+                finish()
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Knigopis)
@@ -47,6 +55,7 @@ class MainActivity : BaseActivity(),
         setContentView(R.layout.activity_main)
         val restoredCurrentTab = savedInstanceState?.getMainState()?.currentTab
         presenter.init(restoredCurrentTab)
+        onBackPressedDispatcher.addCallback(onBackPressedCallback)
     }
 
     override fun onStart() {
@@ -85,12 +94,6 @@ class MainActivity : BaseActivity(),
     private val resultLauncher = registerForActivityResult(StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
             presenter.onBookScreenResult()
-        }
-    }
-
-    override fun onBackPressed() {
-        if (!presenter.back()) {
-            super.onBackPressed()
         }
     }
 
