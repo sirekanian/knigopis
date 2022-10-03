@@ -30,15 +30,16 @@ class App : Application() {
     }
 
     private fun initCrashReporting() {
-        val builder = CoreConfigurationBuilder(this).also {
-            it.buildConfigClass = BuildConfig::class.java
-        }
-        builder.getPluginConfigurationBuilder(HttpSenderConfigurationBuilder::class.java).also {
-            it.uri = "https://collector.tracepot.com/93c9aa62"
-            it.httpMethod = HttpSender.Method.POST
-            it.enabled = true
-        }
-        ACRA.init(this, builder)
+        val httpSenderConfig = HttpSenderConfigurationBuilder()
+            .withUri("https://collector.tracepot.com/93c9aa62")
+            .withHttpMethod(HttpSender.Method.POST)
+            .withEnabled(true)
+            .build()
+        val config = CoreConfigurationBuilder()
+            .withBuildConfigClass(BuildConfig::class.java)
+            .withPluginConfigurations(httpSenderConfig)
+            .build()
+        ACRA.init(this, config)
     }
 
     override fun onCreate() {

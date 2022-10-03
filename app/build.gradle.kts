@@ -46,8 +46,8 @@ android {
 
 dependencies {
     // androidx libraries
-    implementation("androidx.appcompat:appcompat:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("androidx.browser:browser:1.4.0")
 
@@ -66,11 +66,11 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:3.14.9")
 
     // etc
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation("com.google.android.material:material:1.6.1")
+    implementation("com.github.bumptech.glide:glide:4.14.1")
 
     // crash reporting
-    implementation("ch.acra:acra-http:5.8.4")
+    implementation("ch.acra:acra-http:5.9.6")
 }
 
 task("updateReadme") {
