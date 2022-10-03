@@ -130,7 +130,7 @@ class BookViewImpl(
 
     override fun showSaveProgress(isVisible: Boolean) {
         progressMenuItem.isVisible = isVisible
-        progressMenuItem.actionView.show(isVisible)
+        progressMenuItem.actionView?.show(isVisible)
     }
 
     override fun showKeyboard() {
