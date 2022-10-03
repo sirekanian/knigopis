@@ -8,14 +8,14 @@ import kotlin.reflect.KProperty
 
 class PreferenceDelegate<T>(
     private val load: SharedPreferences.(key: String) -> T,
-    private val save: Editor.(key: String, value: T) -> Editor
+    private val save: Editor.(key: String, value: T) -> Unit,
 ) {
 
     operator fun getValue(config: ConfigurationImpl, prop: KProperty<*>): T =
         config.prefs.load(prop.name)
 
     operator fun setValue(config: ConfigurationImpl, prop: KProperty<*>, value: T) =
-        config.prefs.edit().save(prop.name, value).apply()
+        config.prefs.edit().also { it.save(prop.name, value) }.apply()
 
 }
 

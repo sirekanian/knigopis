@@ -81,6 +81,7 @@
         android:visibility="gone"
         app:backgroundTint="@drawable/subscribe_button_background"
         app:layout_anchor="@id/user_app_bar"
-        app:layout_anchorGravity="bottom|end" />
+        app:layout_anchorGravity="bottom|end"
+        tools:ignore="ContentDescription" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
