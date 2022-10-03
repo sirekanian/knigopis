@@ -7,6 +7,7 @@ import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import com.sirekanyan.knigopis.R
@@ -43,7 +44,12 @@ class LoginActivity : AppCompatActivity(), LoginPresenter.Router {
 
     override fun openBrowser(website: Website): Boolean {
         val toolbarColor = ContextCompat.getColor(this, website.color)
-        val customTabsIntent = CustomTabsIntent.Builder().setToolbarColor(toolbarColor).build()
+        val colorSchemeParams = CustomTabColorSchemeParams.Builder()
+            .setToolbarColor(toolbarColor)
+            .build()
+        val customTabsIntent = CustomTabsIntent.Builder()
+            .setDefaultColorSchemeParams(colorSchemeParams)
+            .build()
         return try {
             customTabsIntent.launchUrl(this, website.uri)
             true
