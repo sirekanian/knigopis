@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "com.sirekanyan.knigopis"
+    namespace = "org.sirekanyan.knigopis"
     compileSdk = 33
     defaultConfig {
-        applicationId = "com.sirekanyan.knigopis"
+        applicationId = "org.sirekanyan.knigopis"
         minSdk = 21
         targetSdk = 33
         versionCode = (property("appVersionCode") as String).toInt()
