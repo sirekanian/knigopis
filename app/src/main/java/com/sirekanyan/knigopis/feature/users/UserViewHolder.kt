@@ -1,18 +1,23 @@
 package com.sirekanyan.knigopis.feature.users
 
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
 import com.sirekanyan.knigopis.common.extensions.setCircleImage
 import com.sirekanyan.knigopis.model.UserModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.user.*
 
 class UserViewHolder(
-    override val containerView: View,
+    containerView: View,
     private val onClick: (UserModel) -> Unit,
-    private val onLongClick: (UserModel) -> Unit
-) : CommonViewHolder<UserModel>(containerView),
-    LayoutContainer {
+    private val onLongClick: (UserModel) -> Unit,
+) : CommonViewHolder<UserModel>(containerView) {
+
+    private val userImage = containerView.findViewById<ImageView>(R.id.userImage)
+    private val userNickname = containerView.findViewById<TextView>(R.id.userNickname)
+    private val totalBooksCount = containerView.findViewById<TextView>(R.id.totalBooksCount)
+    private val newBooksCount = containerView.findViewById<TextView>(R.id.newBooksCount)
 
     init {
         containerView.setOnClickListener {

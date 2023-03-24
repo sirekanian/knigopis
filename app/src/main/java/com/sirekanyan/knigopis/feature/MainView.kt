@@ -3,6 +3,7 @@ package com.sirekanyan.knigopis.feature
 import android.content.Context.MODE_PRIVATE
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.sirekanyan.knigopis.BuildConfig
 import com.sirekanyan.knigopis.R
@@ -15,23 +16,17 @@ import com.sirekanyan.knigopis.common.extensions.context
 import com.sirekanyan.knigopis.common.extensions.hide
 import com.sirekanyan.knigopis.common.extensions.isNightMode
 import com.sirekanyan.knigopis.common.extensions.show
+import com.sirekanyan.knigopis.databinding.ActivityMainBinding
 import com.sirekanyan.knigopis.model.CurrentTab
 import com.sirekanyan.knigopis.model.CurrentTab.*
 import com.sirekanyan.knigopis.repository.BookSorting
 import com.sirekanyan.knigopis.repository.Theme
 import com.sirekanyan.knigopis.repository.UserSorting
 import com.sirekanyan.knigopis.repository.cache.COMMON_PREFS_NAME
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.about.view.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.books_page.*
-import kotlinx.android.synthetic.main.default_app_bar.*
-import kotlinx.android.synthetic.main.notes_page.*
-import kotlinx.android.synthetic.main.users_page.*
 
 private val DEBUG_OPTIONS = arrayOf(R.id.debug_option_clear_cache, R.id.debug_option_toggle_theme)
 
-interface MainView : CommonView {
+interface MainView : CommonView<ActivityMainBinding> {
 
     fun showAboutDialog()
     fun showPage(tab: CurrentTab)
@@ -57,9 +52,19 @@ interface MainView : CommonView {
 }
 
 class MainViewImpl(
-    override val containerView: View,
-    private val callbacks: MainView.Callbacks
-) : MainView, LayoutContainer {
+    override val binding: ActivityMainBinding,
+    private val callbacks: MainView.Callbacks,
+) : MainView {
+
+    private val toolbar = binding.defaultAppBar.toolbar
+    private val booksPage = binding.books.booksPage
+    private val usersPage = binding.users.usersPage
+    private val notesPage = binding.notes.notesPage
+    private val addBookButton = binding.books.addBookButton
+    private val booksRecyclerView = binding.books.booksRecyclerView
+    private val usersRecyclerView = binding.users.usersRecyclerView
+    private val notesRecyclerView = binding.notes.notesRecyclerView
+    private val bottomNavigation = binding.bottomNavigation
 
     private val loginOption: MenuItem
     private val profileOption: MenuItem
@@ -126,7 +131,7 @@ class MainViewImpl(
 
     override fun showAboutDialog() {
         val dialogView = View.inflate(context, R.layout.about, null)
-        dialogView.aboutAppVersion.text = BuildConfig.VERSION_NAME
+        dialogView.findViewById<TextView>(R.id.aboutAppVersion).text = BuildConfig.VERSION_NAME
         AlertDialog.Builder(context).setView(dialogView).show()
     }
 

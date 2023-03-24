@@ -1,7 +1,7 @@
 package com.sirekanyan.knigopis.common.android.toast
 
-import android.view.View
+import androidx.viewbinding.ViewBinding
 
-interface CommonView {
-    val containerView: View
+interface CommonView<T : ViewBinding> {
+    val binding: T
 }

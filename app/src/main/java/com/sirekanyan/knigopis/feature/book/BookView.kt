@@ -1,20 +1,17 @@
 package com.sirekanyan.knigopis.feature.book
 
 import android.view.MenuItem
-import android.view.View
 import android.widget.SeekBar
 import androidx.annotation.StringRes
 import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.*
 import com.sirekanyan.knigopis.common.functions.createBookImageUrl
+import com.sirekanyan.knigopis.databinding.BookEditBinding
 import com.sirekanyan.knigopis.model.DateModel
 import com.sirekanyan.knigopis.model.EditBookModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.book_edit.*
-import kotlinx.android.synthetic.main.default_app_bar.*
 
-interface BookView : CommonView {
+interface BookView : CommonView<BookEditBinding> {
 
     fun setTitle(@StringRes title: Int)
     fun setBook(book: EditBookModel)
@@ -36,11 +33,22 @@ interface BookView : CommonView {
 }
 
 class BookViewImpl(
-    override val containerView: View,
+    override val binding: BookEditBinding,
     callbacks: BookView.Callbacks,
-    initialBook: EditBookModel
-) : BookView,
-    LayoutContainer {
+    initialBook: EditBookModel,
+) : BookView {
+
+    private val toolbar = binding.defaultAppBar.toolbar
+    private val titleEditText = binding.titleEditText
+    private val progressSeekBar = binding.progressSeekBar
+    private val authorEditText = binding.authorEditText
+    private val notesTextArea = binding.notesTextArea
+    private val yearEditText = binding.yearEditText
+    private val monthEditText = binding.monthEditText
+    private val dayEditText = binding.dayEditText
+    private val bookImage = binding.bookImage
+    private val progressText = binding.progressText
+    private val bookDateInputGroup = binding.bookDateInputGroup
 
     private val saveMenuItem: MenuItem
     private val progressMenuItem: MenuItem

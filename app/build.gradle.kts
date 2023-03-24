@@ -1,11 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("kotlin-android-extensions")
-}
-
-androidExtensions {
-    isExperimental = true
+    id("kotlin-parcelize")
 }
 
 android {
@@ -45,6 +41,9 @@ android {
     }
     lint {
         warningsAsErrors = true
+    }
+    buildFeatures {
+        viewBinding = true
     }
 }
 

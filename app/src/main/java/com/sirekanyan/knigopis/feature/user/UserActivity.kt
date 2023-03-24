@@ -4,10 +4,10 @@ import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.BaseActivity
 import com.sirekanyan.knigopis.common.extensions.systemClipboardManager
 import com.sirekanyan.knigopis.common.functions.extra
+import com.sirekanyan.knigopis.databinding.UserActivityBinding
 import com.sirekanyan.knigopis.dependency.providePresenter
 import com.sirekanyan.knigopis.feature.book.createBookIntent
 import com.sirekanyan.knigopis.model.EditBookModel
@@ -22,6 +22,7 @@ fun Context.createUserIntent(id: String, name: String): Intent =
 
 class UserActivity : BaseActivity(), UserPresenter.Router {
 
+    val binding by lazy { UserActivityBinding.inflate(layoutInflater) }
     private val presenter by lazy {
         providePresenter(
             checkNotNull(intent.getStringExtra(EXTRA_USER_ID)),
@@ -31,7 +32,7 @@ class UserActivity : BaseActivity(), UserPresenter.Router {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.user_activity)
+        setContentView(binding.root)
         presenter.init()
     }
 

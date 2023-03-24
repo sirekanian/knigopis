@@ -1,19 +1,26 @@
 package com.sirekanyan.knigopis.feature.books
 
 import android.view.View
+import android.widget.ImageView
+import android.widget.ProgressBar
+import android.widget.TextView
+import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
 import com.sirekanyan.knigopis.common.extensions.*
 import com.sirekanyan.knigopis.model.BookDataModel
 import com.sirekanyan.knigopis.model.BookModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.book.*
 
 class BookDataViewHolder(
-    override val containerView: View,
+    containerView: View,
     onClick: (BookDataModel) -> Unit,
-    onLongClick: (BookDataModel) -> Unit
-) : CommonViewHolder<BookModel>(containerView),
-    LayoutContainer {
+    onLongClick: (BookDataModel) -> Unit,
+) : CommonViewHolder<BookModel>(containerView) {
+
+    private val resources = containerView.resources
+    private val bookImage = containerView.findViewById<ImageView>(R.id.bookImage)
+    private val bookTitle = containerView.findViewById<TextView>(R.id.bookTitle)
+    private val bookAuthor = containerView.findViewById<TextView>(R.id.bookAuthor)
+    private val bookProgress = containerView.findViewById<ProgressBar>(R.id.bookProgress)
 
     init {
         containerView.setOnClickListener {

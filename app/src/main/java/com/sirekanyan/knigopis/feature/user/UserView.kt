@@ -1,7 +1,6 @@
 package com.sirekanyan.knigopis.feature.user
 
 import android.view.MenuItem
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
@@ -10,12 +9,11 @@ import com.sirekanyan.knigopis.common.android.header.HeaderItemDecoration
 import com.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
 import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.*
+import com.sirekanyan.knigopis.databinding.UserActivityBinding
 import com.sirekanyan.knigopis.model.BookDataModel
 import com.sirekanyan.knigopis.model.BookModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.user_activity.*
 
-interface UserView : CommonView {
+interface UserView : CommonView<UserActivityBinding> {
 
     fun setTitle(title: String)
     fun setImage(url: String?)
@@ -43,14 +41,20 @@ interface UserView : CommonView {
 }
 
 class UserViewImpl(
-    override val containerView: View,
+    override val binding: UserActivityBinding,
     private val callbacks: UserView.Callbacks,
-    private val dialogs: DialogFactory
-) : UserView,
-    LayoutContainer {
+    private val dialogs: DialogFactory,
+) : UserView {
 
     private val unsubscribeOption: MenuItem
     private val booksAdapter = UserBooksAdapter(callbacks::onBookLongClicked)
+
+    private val toolbar = binding.toolbar
+    private val fab = binding.fab
+    private val userBooksRecyclerView = binding.userBooksRecyclerView
+    private val userImage = binding.userImage
+    private val userBooksProgressBar = binding.userBooksProgressBar
+    private val userBooksErrorPlaceholder = binding.userBooksErrorPlaceholder
 
     init {
         initToolbar(callbacks)

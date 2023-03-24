@@ -1,6 +1,5 @@
 package com.sirekanyan.knigopis.feature.books
 
-import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
@@ -10,13 +9,12 @@ import com.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
 import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.*
 import com.sirekanyan.knigopis.common.functions.handleError
+import com.sirekanyan.knigopis.databinding.BooksPageBinding
 import com.sirekanyan.knigopis.feature.ProgressView
 import com.sirekanyan.knigopis.model.BookDataModel
 import com.sirekanyan.knigopis.model.BookModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.books_page.*
 
-interface BooksView : CommonView, ProgressView {
+interface BooksView : CommonView<BooksPageBinding>, ProgressView {
 
     fun updateBooks(books: List<BookModel>)
     fun showBooksError(throwable: Throwable)
@@ -36,11 +34,17 @@ interface BooksView : CommonView, ProgressView {
 }
 
 class BooksViewImpl(
-    override val containerView: View,
+    override val binding: BooksPageBinding,
     private val callbacks: BooksView.Callbacks,
     progressView: ProgressView,
-    private val dialogs: DialogFactory
-) : BooksView, LayoutContainer, ProgressView by progressView {
+    private val dialogs: DialogFactory,
+) : BooksView,
+    ProgressView by progressView {
+
+    private val booksRecyclerView = binding.booksRecyclerView
+    private val addBookButton = binding.addBookButton
+    private val booksPlaceholder = binding.booksPlaceholder
+    private val booksErrorPlaceholder = binding.booksErrorPlaceholder
 
     private val booksAdapter = BooksAdapter(callbacks::onBookClicked, callbacks::onBookLongClicked)
 

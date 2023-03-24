@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.extensions.app
+import com.sirekanyan.knigopis.databinding.LoginActivityBinding
 import com.sirekanyan.knigopis.dependency.providePresenter
 import com.sirekanyan.knigopis.feature.startMainActivity
 
@@ -24,12 +24,13 @@ fun Context.startLoginActivity() {
 
 class LoginActivity : AppCompatActivity(), LoginPresenter.Router {
 
+    val binding by lazy { LoginActivityBinding.inflate(layoutInflater) }
     private val presenter by lazy { providePresenter() }
     private val auth by lazy { app.authRepository }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_activity)
+        setContentView(binding.root)
         presenter.init()
     }
 

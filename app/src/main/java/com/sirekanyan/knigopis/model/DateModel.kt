@@ -1,7 +1,7 @@
 package com.sirekanyan.knigopis.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 val EMPTY_DATE = DateModel("", "", "")
 
@@ -9,7 +9,7 @@ val EMPTY_DATE = DateModel("", "", "")
 data class DateModel(
     val year: String,
     val month: String,
-    val day: String
+    val day: String,
 ) : Parcelable {
     fun isEmpty() = this == EMPTY_DATE
 }

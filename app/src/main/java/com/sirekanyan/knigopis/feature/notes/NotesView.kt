@@ -1,16 +1,15 @@
 package com.sirekanyan.knigopis.feature.notes
 
-import android.view.View
+import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.hide
 import com.sirekanyan.knigopis.common.extensions.keepOnTop
 import com.sirekanyan.knigopis.common.extensions.show
 import com.sirekanyan.knigopis.common.functions.handleError
+import com.sirekanyan.knigopis.databinding.NotesPageBinding
 import com.sirekanyan.knigopis.feature.ProgressView
 import com.sirekanyan.knigopis.model.NoteModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.notes_page.*
 
-interface NotesView : ProgressView {
+interface NotesView : CommonView<NotesPageBinding>, ProgressView {
 
     fun updateNotes(notes: List<NoteModel>)
     fun showNotesError(throwable: Throwable)
@@ -23,12 +22,15 @@ interface NotesView : ProgressView {
 }
 
 class NotesViewImpl(
-    override val containerView: View,
+    override val binding: NotesPageBinding,
     private val callbacks: NotesView.Callbacks,
-    private val progressView: ProgressView
+    private val progressView: ProgressView,
 ) : NotesView,
-    LayoutContainer,
     ProgressView by progressView {
+
+    private val notesRecyclerView = binding.notesRecyclerView
+    private val notesPlaceholder = binding.notesPlaceholder
+    private val notesErrorPlaceholder = binding.notesErrorPlaceholder
 
     private val notesAdapter = NotesAdapter(callbacks::onNoteClicked)
 

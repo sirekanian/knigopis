@@ -14,6 +14,7 @@ import com.sirekanyan.knigopis.common.extensions.app
 import com.sirekanyan.knigopis.common.extensions.io2main
 import com.sirekanyan.knigopis.common.extensions.showToast
 import com.sirekanyan.knigopis.common.functions.logError
+import com.sirekanyan.knigopis.databinding.ActivityMainBinding
 import com.sirekanyan.knigopis.dependency.providePresenter
 import com.sirekanyan.knigopis.feature.book.createBookIntent
 import com.sirekanyan.knigopis.feature.books.BooksPresenter
@@ -39,6 +40,7 @@ class MainActivity : BaseActivity(),
     UsersPresenter.Router,
     NotesPresenter.Router {
 
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private val presenter by lazy { providePresenter() }
     private val api by lazy { app.endpoint }
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
@@ -52,7 +54,7 @@ class MainActivity : BaseActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Knigopis)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         val restoredCurrentTab = savedInstanceState?.getMainState()?.currentTab
         presenter.init(restoredCurrentTab)
         onBackPressedDispatcher.addCallback(onBackPressedCallback)

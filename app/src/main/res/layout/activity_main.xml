@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     tools:ignore="MergeRootFrame">
 
-    <include layout="@layout/default_app_bar" />
+    <include
+        android:id="@+id/defaultAppBar"
+        layout="@layout/default_app_bar" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
@@ -19,15 +21,18 @@
             android:layout_height="match_parent">
 
             <include
+                android:id="@+id/books"
                 layout="@layout/books_page"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
             <include
+                android:id="@+id/users"
                 layout="@layout/users_page"
                 android:visibility="gone" />
 
             <include
+                android:id="@+id/notes"
                 layout="@layout/notes_page"
                 android:visibility="gone" />
 

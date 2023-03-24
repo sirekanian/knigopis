@@ -1,19 +1,24 @@
 package com.sirekanyan.knigopis.feature.user
 
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
 import com.sirekanyan.knigopis.common.extensions.setSquareImage
 import com.sirekanyan.knigopis.common.extensions.showNow
 import com.sirekanyan.knigopis.model.BookDataModel
 import com.sirekanyan.knigopis.model.BookModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.user_book.*
 
 class UserBookDataViewHolder(
-    override val containerView: View,
-    private val onClick: (BookDataModel) -> Unit
-) : CommonViewHolder<BookModel>(containerView),
-    LayoutContainer {
+    containerView: View,
+    private val onClick: (BookDataModel) -> Unit,
+) : CommonViewHolder<BookModel>(containerView) {
+
+    private val bookTitle = containerView.findViewById<TextView>(R.id.bookTitle)
+    private val bookAuthor = containerView.findViewById<TextView>(R.id.bookAuthor)
+    private val bookNotes = containerView.findViewById<TextView>(R.id.bookNotes)
+    private val bookImage = containerView.findViewById<ImageView>(R.id.bookImage)
 
     init {
         containerView.setOnLongClickListener {

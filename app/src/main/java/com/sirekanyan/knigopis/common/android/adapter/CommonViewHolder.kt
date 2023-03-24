@@ -2,9 +2,8 @@ package com.sirekanyan.knigopis.common.android.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.sirekanyan.knigopis.common.android.toast.CommonView
 
-abstract class CommonViewHolder<T>(view: View) : RecyclerView.ViewHolder(view), CommonView {
+abstract class CommonViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
 
     protected var model: T? = null
 

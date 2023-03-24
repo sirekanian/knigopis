@@ -3,10 +3,10 @@ package com.sirekanyan.knigopis.feature.book
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.BaseActivity
 import com.sirekanyan.knigopis.common.extensions.getParcelableExtraCompat
 import com.sirekanyan.knigopis.common.functions.extra
+import com.sirekanyan.knigopis.databinding.BookEditBinding
 import com.sirekanyan.knigopis.dependency.providePresenter
 import com.sirekanyan.knigopis.model.EditBookModel
 
@@ -17,11 +17,12 @@ fun Context.createBookIntent(book: EditBookModel): Intent =
 
 class BookActivity : BaseActivity(), BookPresenter.Router {
 
+    val binding by lazy { BookEditBinding.inflate(layoutInflater) }
     private val presenter by lazy { providePresenter(intent.getParcelableExtraCompat(EXTRA_BOOK)!!) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.book_edit)
+        setContentView(binding.root)
         presenter.init()
     }
 

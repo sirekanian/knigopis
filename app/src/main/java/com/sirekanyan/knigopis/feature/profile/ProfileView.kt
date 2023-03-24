@@ -1,20 +1,18 @@
 package com.sirekanyan.knigopis.feature.profile
 
 import android.view.MenuItem
-import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.Toolbar
 import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.*
+import com.sirekanyan.knigopis.databinding.ProfileActivityBinding
 import com.sirekanyan.knigopis.model.BookDataModel
 import com.sirekanyan.knigopis.model.ProfileModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.profile_activity.*
 import java.util.*
 
-interface ProfileView : CommonView {
+interface ProfileView : CommonView<ProfileActivityBinding> {
 
     val isEditMode: Boolean
     val isProfileChanged: Boolean
@@ -28,7 +26,7 @@ interface ProfileView : CommonView {
     fun setBooks(
         todo: Stack<BookDataModel>,
         doing: Stack<BookDataModel>,
-        done: Stack<BookDataModel>
+        done: Stack<BookDataModel>,
     )
 
     interface Callbacks {
@@ -42,10 +40,20 @@ interface ProfileView : CommonView {
 }
 
 class ProfileViewImpl(
-    override val containerView: View,
-    private val callbacks: ProfileView.Callbacks
-) : ProfileView,
-    LayoutContainer {
+    override val binding: ProfileActivityBinding,
+    private val callbacks: ProfileView.Callbacks,
+) : ProfileView {
+
+    private val profileNicknameSwitcher = binding.profileNicknameSwitcher
+    private val profileNickname = binding.profileNickname
+    private val profileNicknameEditText = binding.profileNicknameEditText
+    private val profileToolbar = binding.profileToolbar
+    private val profileAvatar = binding.profileAvatar
+    private val profileTodoCount = binding.profileTodoCount
+    private val profileDoingCount = binding.profileDoingCount
+    private val profileDoneCount = binding.profileDoneCount
+    private val topProfileSpace = binding.topProfileSpace
+    private val randomProfileBook = binding.randomProfileBook
 
     private lateinit var editOption: MenuItem
     override val isEditMode get() = profileNicknameSwitcher.displayedChild == 1
@@ -109,7 +117,7 @@ class ProfileViewImpl(
     override fun setBooks(
         todo: Stack<BookDataModel>,
         doing: Stack<BookDataModel>,
-        done: Stack<BookDataModel>
+        done: Stack<BookDataModel>,
     ) {
         mapOf(
             profileTodoCount to todo,

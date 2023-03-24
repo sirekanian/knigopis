@@ -1,20 +1,19 @@
 package com.sirekanyan.knigopis.feature.users
 
-import android.view.View
 import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
 import com.sirekanyan.knigopis.common.android.dialog.DialogItem
 import com.sirekanyan.knigopis.common.android.dialog.createDialogItem
+import com.sirekanyan.knigopis.common.android.toast.CommonView
 import com.sirekanyan.knigopis.common.extensions.hide
 import com.sirekanyan.knigopis.common.extensions.keepOnTop
 import com.sirekanyan.knigopis.common.extensions.show
 import com.sirekanyan.knigopis.common.functions.handleError
+import com.sirekanyan.knigopis.databinding.UsersPageBinding
 import com.sirekanyan.knigopis.feature.ProgressView
 import com.sirekanyan.knigopis.model.ProfileItem
 import com.sirekanyan.knigopis.model.UserModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.users_page.*
 
-interface UsersView : ProgressView {
+interface UsersView : CommonView<UsersPageBinding>, ProgressView {
 
     fun updateUsers(users: List<UserModel>)
     fun showUsersError(throwable: Throwable)
@@ -30,13 +29,16 @@ interface UsersView : ProgressView {
 }
 
 class UsersViewImpl(
-    override val containerView: View,
+    override val binding: UsersPageBinding,
     private val callbacks: UsersView.Callbacks,
     private val progressView: ProgressView,
-    private val dialogs: DialogFactory
+    private val dialogs: DialogFactory,
 ) : UsersView,
-    LayoutContainer,
     ProgressView by progressView {
+
+    private val usersRecyclerView = binding.usersRecyclerView
+    private val usersPlaceholder = binding.usersPlaceholder
+    private val usersErrorPlaceholder = binding.usersErrorPlaceholder
 
     private val usersAdapter = UsersAdapter(callbacks::onUserClicked, callbacks::onUserLongClicked)
 

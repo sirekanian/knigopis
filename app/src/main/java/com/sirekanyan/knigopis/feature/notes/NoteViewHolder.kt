@@ -1,18 +1,26 @@
 package com.sirekanyan.knigopis.feature.notes
 
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import com.sirekanyan.knigopis.R
 import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
 import com.sirekanyan.knigopis.common.extensions.setCircleImage
 import com.sirekanyan.knigopis.common.extensions.setSquareImage
 import com.sirekanyan.knigopis.model.NoteModel
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.note.*
 
 class NoteViewHolder(
-    override val containerView: View,
-    private val onClick: (NoteModel) -> Unit
-) : CommonViewHolder<NoteModel>(containerView),
-    LayoutContainer {
+    containerView: View,
+    private val onClick: (NoteModel) -> Unit,
+) : CommonViewHolder<NoteModel>(containerView) {
+
+    private val bookImage = containerView.findViewById<ImageView>(R.id.bookImage)
+    private val bookTitle = containerView.findViewById<TextView>(R.id.bookTitle)
+    private val bookAuthor = containerView.findViewById<TextView>(R.id.bookAuthor)
+    private val userNotes = containerView.findViewById<TextView>(R.id.userNotes)
+    private val userDate = containerView.findViewById<TextView>(R.id.userDate)
+    private val userNickname = containerView.findViewById<TextView>(R.id.userNickname)
+    private val userImage = containerView.findViewById<ImageView>(R.id.userImage)
 
     init {
         containerView.setOnClickListener {

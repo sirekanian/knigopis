@@ -2,7 +2,7 @@ package com.sirekanyan.knigopis.model
 
 import android.os.Parcelable
 import com.sirekanyan.knigopis.MAX_BOOK_PRIORITY
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 val EMPTY_BOOK = EditBookModel(BookAction.NEW)
 
@@ -20,7 +20,7 @@ class EditBookModel(
     val author: String = "",
     val progress: Int = 0,
     val date: DateModel = EMPTY_DATE,
-    val notes: String = ""
+    val notes: String = "",
 ) : Parcelable {
     val isFinished get() = id != null && progress == MAX_BOOK_PRIORITY
     val isPlanned get() = id != null && progress != MAX_BOOK_PRIORITY
