@@ -14,8 +14,11 @@ class PreferenceDelegate<T>(
     operator fun getValue(config: ConfigurationImpl, prop: KProperty<*>): T =
         config.prefs.load(prop.name)
 
-    operator fun setValue(config: ConfigurationImpl, prop: KProperty<*>, value: T) =
-        config.prefs.edit().also { it.save(prop.name, value) }.apply()
+    operator fun setValue(config: ConfigurationImpl, prop: KProperty<*>, value: T) {
+        val editor = config.prefs.edit()
+        editor.save(prop.name, value)
+        editor.apply()
+    }
 
 }
 

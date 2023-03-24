@@ -5,4 +5,6 @@
         <ignore path="res/menu" />
         <ignore path="res/values" />
     </issue>
+    <!-- TODO: https://github.com/bumptech/glide/issues/4940 -->
+    <issue id="NotificationPermission" severity="ignore" />
 </lint>
