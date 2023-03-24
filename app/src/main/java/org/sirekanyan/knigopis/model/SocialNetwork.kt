@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.model
+package org.sirekanyan.knigopis.model
 
 import android.net.Uri
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 
 fun Uri.toSocialNetwork() = SocialNetwork.values().find { host in it.hosts }
 

@@ -1,7 +1,7 @@
-package com.sirekanyan.knigopis.common.android
+package org.sirekanyan.knigopis.common.android
 
 import android.app.Application
-import com.sirekanyan.knigopis.common.extensions.systemConnectivityManager
+import org.sirekanyan.knigopis.common.extensions.systemConnectivityManager
 
 interface NetworkChecker {
 

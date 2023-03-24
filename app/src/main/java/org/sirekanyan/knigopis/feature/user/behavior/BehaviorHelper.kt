@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.feature.user.behavior
+package org.sirekanyan.knigopis.feature.user.behavior
 
 import android.view.View
 

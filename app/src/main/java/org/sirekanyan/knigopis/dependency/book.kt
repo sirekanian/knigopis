@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis.dependency
+package org.sirekanyan.knigopis.dependency
 
-import com.sirekanyan.knigopis.common.extensions.app
-import com.sirekanyan.knigopis.feature.book.*
-import com.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.common.extensions.app
+import org.sirekanyan.knigopis.feature.book.*
+import org.sirekanyan.knigopis.model.EditBookModel
 
 fun BookActivity.providePresenter(book: EditBookModel): BookPresenter {
     val interactor = BookInteractorImpl(app.bookRepository)

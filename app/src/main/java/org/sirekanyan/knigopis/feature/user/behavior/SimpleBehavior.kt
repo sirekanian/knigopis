@@ -1,10 +1,10 @@
-package com.sirekanyan.knigopis.feature.user.behavior
+package org.sirekanyan.knigopis.feature.user.behavior
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 import kotlin.math.abs
 import kotlin.math.min
 

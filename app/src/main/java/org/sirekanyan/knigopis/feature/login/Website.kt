@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login
 
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 
 enum class Website(private val code: String, val color: Int, val title: Int, val icon: Int) {
 

@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
 import android.app.Application
 import android.content.Context.MODE_PRIVATE
-import com.sirekanyan.knigopis.repository.config.booleanPreference
-import com.sirekanyan.knigopis.repository.config.enumPreference
+import org.sirekanyan.knigopis.repository.config.booleanPreference
+import org.sirekanyan.knigopis.repository.config.enumPreference
 
 private const val PREFS_NAME = "config"
 

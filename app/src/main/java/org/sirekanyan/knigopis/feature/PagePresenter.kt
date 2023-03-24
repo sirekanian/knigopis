@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.feature
+package org.sirekanyan.knigopis.feature
 
-import com.sirekanyan.knigopis.common.Presenter
+import org.sirekanyan.knigopis.common.Presenter
 
 interface PagePresenter : Presenter {
 

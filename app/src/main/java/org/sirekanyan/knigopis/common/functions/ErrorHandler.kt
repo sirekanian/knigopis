@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.common.functions
+package org.sirekanyan.knigopis.common.functions
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.extensions.isVisible
-import com.sirekanyan.knigopis.common.extensions.show
-import com.sirekanyan.knigopis.common.extensions.showToast
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.extensions.isVisible
+import org.sirekanyan.knigopis.common.extensions.show
+import org.sirekanyan.knigopis.common.extensions.showToast
 import retrofit2.HttpException
 
 fun handleError(

@@ -1,10 +1,10 @@
-package com.sirekanyan.knigopis.feature.books
+package org.sirekanyan.knigopis.feature.books
 
 import android.content.res.Resources
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import androidx.recyclerview.widget.RecyclerView
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 
 class FabOnScrollListener(resources: Resources, fab: View) : RecyclerView.OnScrollListener() {
 

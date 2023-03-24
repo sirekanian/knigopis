@@ -1,14 +1,14 @@
-package com.sirekanyan.knigopis.feature.book
+package org.sirekanyan.knigopis.feature.book
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.sirekanyan.knigopis.common.BaseActivity
-import com.sirekanyan.knigopis.common.extensions.getParcelableExtraCompat
-import com.sirekanyan.knigopis.common.functions.extra
-import com.sirekanyan.knigopis.databinding.BookEditBinding
-import com.sirekanyan.knigopis.dependency.providePresenter
-import com.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.common.BaseActivity
+import org.sirekanyan.knigopis.common.extensions.getParcelableExtraCompat
+import org.sirekanyan.knigopis.common.functions.extra
+import org.sirekanyan.knigopis.databinding.BookEditBinding
+import org.sirekanyan.knigopis.dependency.providePresenter
+import org.sirekanyan.knigopis.model.EditBookModel
 
 private val EXTRA_BOOK = extra("book")
 

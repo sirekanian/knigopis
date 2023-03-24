@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis
+package org.sirekanyan.knigopis
 
 import android.app.Application
 import android.content.Context
-import com.sirekanyan.knigopis.dependency.*
+import org.sirekanyan.knigopis.dependency.*
 import org.acra.ACRA
 import org.acra.config.CoreConfigurationBuilder
 import org.acra.config.HttpSenderConfigurationBuilder

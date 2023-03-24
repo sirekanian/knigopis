@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.feature.profile
+package org.sirekanyan.knigopis.feature.profile
 
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.Presenter
-import com.sirekanyan.knigopis.common.extensions.toast
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.ProfileModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.Presenter
+import org.sirekanyan.knigopis.common.extensions.toast
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.ProfileModel
 import java.util.*
 
 interface ProfilePresenter : Presenter {

@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.model
+package org.sirekanyan.knigopis.model
 
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.ResourceProvider
-import com.sirekanyan.knigopis.common.android.adapter.HeadedModel
-import com.sirekanyan.knigopis.common.functions.createBookImageUrl
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.ResourceProvider
+import org.sirekanyan.knigopis.common.android.adapter.HeadedModel
+import org.sirekanyan.knigopis.common.functions.createBookImageUrl
 
 fun createBookHeaderModel(resources: ResourceProvider, title: String, count: Int): BookHeaderModel {
     val titleOrDefault = title.ifEmpty { resources.getString(R.string.books_header_done_other) }

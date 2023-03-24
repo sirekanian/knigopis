@@ -1,10 +1,10 @@
-package com.sirekanyan.knigopis.feature.users
+package org.sirekanyan.knigopis.feature.users
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.extensions.inflate
-import com.sirekanyan.knigopis.model.UserModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.extensions.inflate
+import org.sirekanyan.knigopis.model.UserModel
 
 class UsersAdapter(
     private val onClick: (UserModel) -> Unit,

@@ -1,18 +1,18 @@
-package com.sirekanyan.knigopis.feature.user
+package org.sirekanyan.knigopis.feature.user
 
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.Presenter
-import com.sirekanyan.knigopis.common.android.ResourceProvider
-import com.sirekanyan.knigopis.common.extensions.snackbar
-import com.sirekanyan.knigopis.common.extensions.toast
-import com.sirekanyan.knigopis.common.functions.createUserImageUrl
-import com.sirekanyan.knigopis.common.functions.createUserPublicUrl
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.EditBookModel
-import com.sirekanyan.knigopis.model.createDoneBook
-import com.sirekanyan.knigopis.model.createTodoBook
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.Presenter
+import org.sirekanyan.knigopis.common.android.ResourceProvider
+import org.sirekanyan.knigopis.common.extensions.snackbar
+import org.sirekanyan.knigopis.common.extensions.toast
+import org.sirekanyan.knigopis.common.functions.createUserImageUrl
+import org.sirekanyan.knigopis.common.functions.createUserPublicUrl
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.model.createDoneBook
+import org.sirekanyan.knigopis.model.createTodoBook
 
 interface UserPresenter : Presenter {
 

@@ -1,14 +1,14 @@
-package com.sirekanyan.knigopis.feature.notes
+package org.sirekanyan.knigopis.feature.notes
 
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.common.extensions.showProgressBar
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.feature.PagePresenter
-import com.sirekanyan.knigopis.feature.PagesPresenter
-import com.sirekanyan.knigopis.model.CurrentTab
-import com.sirekanyan.knigopis.model.NoteModel
-import com.sirekanyan.knigopis.repository.NoteRepository
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.common.extensions.showProgressBar
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.feature.PagePresenter
+import org.sirekanyan.knigopis.feature.PagesPresenter
+import org.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.model.NoteModel
+import org.sirekanyan.knigopis.repository.NoteRepository
 
 interface NotesPresenter : PagePresenter {
 

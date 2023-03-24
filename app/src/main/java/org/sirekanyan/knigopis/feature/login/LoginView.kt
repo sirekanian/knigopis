@@ -1,14 +1,14 @@
-package com.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login
 
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.context
-import com.sirekanyan.knigopis.common.extensions.inflate
-import com.sirekanyan.knigopis.databinding.LoginActivityBinding
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.context
+import org.sirekanyan.knigopis.common.extensions.inflate
+import org.sirekanyan.knigopis.databinding.LoginActivityBinding
 
 interface LoginView : CommonView<LoginActivityBinding> {
 

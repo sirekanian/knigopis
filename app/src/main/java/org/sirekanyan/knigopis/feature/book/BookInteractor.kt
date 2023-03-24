@@ -1,10 +1,10 @@
-package com.sirekanyan.knigopis.feature.book
+package org.sirekanyan.knigopis.feature.book
 
-import com.sirekanyan.knigopis.MAX_BOOK_PRIORITY
-import com.sirekanyan.knigopis.model.EditBookModel
-import com.sirekanyan.knigopis.model.toFinishedBook
-import com.sirekanyan.knigopis.model.toPlannedBook
-import com.sirekanyan.knigopis.repository.BookRepository
+import org.sirekanyan.knigopis.MAX_BOOK_PRIORITY
+import org.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.model.toFinishedBook
+import org.sirekanyan.knigopis.model.toPlannedBook
+import org.sirekanyan.knigopis.repository.BookRepository
 import io.reactivex.Completable
 
 interface BookInteractor {

@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.repository.network
+package org.sirekanyan.knigopis.repository.network
 
 import okhttp3.Cookie
 import okhttp3.CookieJar

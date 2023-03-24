@@ -1,10 +1,10 @@
-package com.sirekanyan.knigopis.common.extensions
+package org.sirekanyan.knigopis.common.extensions
 
 import android.content.Context
 import android.content.res.Resources
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
-import com.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.android.toast.CommonView
 
 val CommonView<*>.containerView: View
     get() = binding.root

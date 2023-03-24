@@ -1,7 +1,7 @@
-package com.sirekanyan.knigopis.dependency
+package org.sirekanyan.knigopis.dependency
 
-import com.sirekanyan.knigopis.common.extensions.app
-import com.sirekanyan.knigopis.feature.profile.*
+import org.sirekanyan.knigopis.common.extensions.app
+import org.sirekanyan.knigopis.feature.profile.*
 
 fun ProfileActivity.providePresenter(): ProfilePresenter {
     val interactor = ProfileInteractorImpl(app.endpoint, app.bookRepository, app.tokenStorage)

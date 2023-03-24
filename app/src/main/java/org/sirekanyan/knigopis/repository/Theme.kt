@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
 import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES.Q
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.NightMode
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 
 enum class Theme(@IdRes val id: Int, @NightMode val mode: Int) {
 

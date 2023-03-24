@@ -1,10 +1,10 @@
-package com.sirekanyan.knigopis.repository.cache
+package org.sirekanyan.knigopis.repository.cache
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import com.sirekanyan.knigopis.common.android.adapter.HeadedModel
+import org.sirekanyan.knigopis.common.android.adapter.HeadedModel
 import java.lang.reflect.Type
 
 class HeadedModelDeserializer<T : HeadedModel>(

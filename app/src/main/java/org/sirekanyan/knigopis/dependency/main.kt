@@ -1,15 +1,15 @@
-package com.sirekanyan.knigopis.dependency
+package org.sirekanyan.knigopis.dependency
 
-import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
-import com.sirekanyan.knigopis.common.extensions.app
-import com.sirekanyan.knigopis.feature.*
-import com.sirekanyan.knigopis.feature.books.BooksPresenterImpl
-import com.sirekanyan.knigopis.feature.books.BooksViewImpl
-import com.sirekanyan.knigopis.feature.notes.NotesPresenterImpl
-import com.sirekanyan.knigopis.feature.notes.NotesViewImpl
-import com.sirekanyan.knigopis.feature.users.UsersPresenterImpl
-import com.sirekanyan.knigopis.feature.users.UsersViewImpl
-import com.sirekanyan.knigopis.model.CurrentTab.*
+import org.sirekanyan.knigopis.common.android.dialog.DialogFactory
+import org.sirekanyan.knigopis.common.extensions.app
+import org.sirekanyan.knigopis.feature.*
+import org.sirekanyan.knigopis.feature.books.BooksPresenterImpl
+import org.sirekanyan.knigopis.feature.books.BooksViewImpl
+import org.sirekanyan.knigopis.feature.notes.NotesPresenterImpl
+import org.sirekanyan.knigopis.feature.notes.NotesViewImpl
+import org.sirekanyan.knigopis.feature.users.UsersPresenterImpl
+import org.sirekanyan.knigopis.feature.users.UsersViewImpl
+import org.sirekanyan.knigopis.model.CurrentTab.*
 
 fun MainActivity.providePresenter(): MainPresenter {
     val booksPresenter = BooksPresenterImpl(this, app.bookRepository)

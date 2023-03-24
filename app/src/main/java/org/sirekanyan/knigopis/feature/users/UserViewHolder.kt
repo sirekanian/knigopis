@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.feature.users
+package org.sirekanyan.knigopis.feature.users
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
-import com.sirekanyan.knigopis.common.extensions.setCircleImage
-import com.sirekanyan.knigopis.model.UserModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
+import org.sirekanyan.knigopis.common.extensions.setCircleImage
+import org.sirekanyan.knigopis.model.UserModel
 
 class UserViewHolder(
     containerView: View,

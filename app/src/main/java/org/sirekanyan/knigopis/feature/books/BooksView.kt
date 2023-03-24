@@ -1,18 +1,18 @@
-package com.sirekanyan.knigopis.feature.books
+package org.sirekanyan.knigopis.feature.books
 
 import androidx.appcompat.app.AlertDialog
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
-import com.sirekanyan.knigopis.common.android.dialog.createDialogItem
-import com.sirekanyan.knigopis.common.android.header.HeaderItemDecoration
-import com.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.*
-import com.sirekanyan.knigopis.common.functions.handleError
-import com.sirekanyan.knigopis.databinding.BooksPageBinding
-import com.sirekanyan.knigopis.feature.ProgressView
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.dialog.DialogFactory
+import org.sirekanyan.knigopis.common.android.dialog.createDialogItem
+import org.sirekanyan.knigopis.common.android.header.HeaderItemDecoration
+import org.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.*
+import org.sirekanyan.knigopis.common.functions.handleError
+import org.sirekanyan.knigopis.databinding.BooksPageBinding
+import org.sirekanyan.knigopis.feature.ProgressView
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookModel
 
 interface BooksView : CommonView<BooksPageBinding>, ProgressView {
 

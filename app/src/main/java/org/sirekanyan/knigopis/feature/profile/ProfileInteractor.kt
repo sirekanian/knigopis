@@ -1,14 +1,14 @@
-package com.sirekanyan.knigopis.feature.profile
+package org.sirekanyan.knigopis.feature.profile
 
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.ProfileModel
-import com.sirekanyan.knigopis.model.dto.User
-import com.sirekanyan.knigopis.model.toProfile
-import com.sirekanyan.knigopis.model.toProfileModel
-import com.sirekanyan.knigopis.repository.BookRepository
-import com.sirekanyan.knigopis.repository.Endpoint
-import com.sirekanyan.knigopis.repository.TokenStorage
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.ProfileModel
+import org.sirekanyan.knigopis.model.dto.User
+import org.sirekanyan.knigopis.model.toProfile
+import org.sirekanyan.knigopis.model.toProfileModel
+import org.sirekanyan.knigopis.repository.BookRepository
+import org.sirekanyan.knigopis.repository.Endpoint
+import org.sirekanyan.knigopis.repository.TokenStorage
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.Single

@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.functions
+package org.sirekanyan.knigopis.common.functions
 
 import android.util.Log
 import org.acra.ACRA

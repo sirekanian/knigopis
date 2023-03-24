@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.android.dialog
+package org.sirekanyan.knigopis.common.android.dialog
 
 import android.content.Context
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.extensions.inflate
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.extensions.inflate
 
 interface DialogFactory {
 

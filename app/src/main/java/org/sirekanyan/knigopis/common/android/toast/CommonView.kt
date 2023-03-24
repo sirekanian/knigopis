@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.android.toast
+package org.sirekanyan.knigopis.common.android.toast
 
 import androidx.viewbinding.ViewBinding
 

@@ -1,7 +1,7 @@
-package com.sirekanyan.knigopis.common.android.dialog
+package org.sirekanyan.knigopis.common.android.dialog
 
-import com.sirekanyan.knigopis.common.android.IdStringResource
-import com.sirekanyan.knigopis.common.android.PlainStringResource
+import org.sirekanyan.knigopis.common.android.IdStringResource
+import org.sirekanyan.knigopis.common.android.PlainStringResource
 
 fun createDialogItem(titleRes: Int, iconRes: Int, onClick: () -> Unit) =
     DialogItem(IdStringResource(titleRes), iconRes, onClick)

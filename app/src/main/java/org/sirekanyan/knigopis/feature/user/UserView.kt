@@ -1,17 +1,17 @@
-package com.sirekanyan.knigopis.feature.user
+package org.sirekanyan.knigopis.feature.user
 
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
-import com.sirekanyan.knigopis.common.android.dialog.createDialogItem
-import com.sirekanyan.knigopis.common.android.header.HeaderItemDecoration
-import com.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.*
-import com.sirekanyan.knigopis.databinding.UserActivityBinding
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.dialog.DialogFactory
+import org.sirekanyan.knigopis.common.android.dialog.createDialogItem
+import org.sirekanyan.knigopis.common.android.header.HeaderItemDecoration
+import org.sirekanyan.knigopis.common.android.header.StickyHeaderImpl
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.*
+import org.sirekanyan.knigopis.databinding.UserActivityBinding
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookModel
 
 interface UserView : CommonView<UserActivityBinding> {
 

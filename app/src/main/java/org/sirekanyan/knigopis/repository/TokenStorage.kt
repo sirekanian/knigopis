@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
 import android.content.Context
 

@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.model.dto
+package org.sirekanyan.knigopis.model.dto
 
 class FinishedBook(
     val id: String,

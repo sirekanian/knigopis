@@ -1,15 +1,15 @@
-package com.sirekanyan.knigopis.feature.book
+package org.sirekanyan.knigopis.feature.book
 
 import android.view.MenuItem
 import android.widget.SeekBar
 import androidx.annotation.StringRes
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.*
-import com.sirekanyan.knigopis.common.functions.createBookImageUrl
-import com.sirekanyan.knigopis.databinding.BookEditBinding
-import com.sirekanyan.knigopis.model.DateModel
-import com.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.*
+import org.sirekanyan.knigopis.common.functions.createBookImageUrl
+import org.sirekanyan.knigopis.databinding.BookEditBinding
+import org.sirekanyan.knigopis.model.DateModel
+import org.sirekanyan.knigopis.model.EditBookModel
 
 interface BookView : CommonView<BookEditBinding> {
 

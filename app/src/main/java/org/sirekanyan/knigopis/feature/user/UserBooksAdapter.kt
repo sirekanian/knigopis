@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.feature.user
+package org.sirekanyan.knigopis.feature.user
 
 import android.view.ViewGroup
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.HeadedAdapter
-import com.sirekanyan.knigopis.common.android.adapter.SimpleItemCallback
-import com.sirekanyan.knigopis.common.extensions.inflate
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.HeadedAdapter
+import org.sirekanyan.knigopis.common.android.adapter.SimpleItemCallback
+import org.sirekanyan.knigopis.common.extensions.inflate
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookModel
 
 class UserBooksAdapter(
     private val onLongClick: (BookDataModel) -> Unit

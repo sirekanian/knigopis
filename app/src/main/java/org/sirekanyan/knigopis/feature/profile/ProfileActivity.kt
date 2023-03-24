@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.feature.profile
+package org.sirekanyan.knigopis.feature.profile
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.sirekanyan.knigopis.common.BaseActivity
-import com.sirekanyan.knigopis.common.functions.createProfileShareIntent
-import com.sirekanyan.knigopis.databinding.ProfileActivityBinding
-import com.sirekanyan.knigopis.dependency.providePresenter
+import org.sirekanyan.knigopis.common.BaseActivity
+import org.sirekanyan.knigopis.common.functions.createProfileShareIntent
+import org.sirekanyan.knigopis.databinding.ProfileActivityBinding
+import org.sirekanyan.knigopis.dependency.providePresenter
 
 fun Context.createProfileIntent() = Intent(this, ProfileActivity::class.java)
 

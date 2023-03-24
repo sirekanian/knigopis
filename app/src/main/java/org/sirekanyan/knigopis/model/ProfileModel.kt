@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.model
+package org.sirekanyan.knigopis.model
 
 data class ProfileModel(
     val id: String,

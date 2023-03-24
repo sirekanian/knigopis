@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.common.android.header
+package org.sirekanyan.knigopis.common.android.header
 
 import android.view.View
 import android.widget.TextView
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.HeadedAdapter
-import com.sirekanyan.knigopis.common.extensions.showNow
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.HeadedAdapter
+import org.sirekanyan.knigopis.common.extensions.showNow
+import org.sirekanyan.knigopis.model.BookModel
 
 class StickyHeaderImpl(private val adapter: HeadedAdapter<BookModel>) : StickyHeader {
 

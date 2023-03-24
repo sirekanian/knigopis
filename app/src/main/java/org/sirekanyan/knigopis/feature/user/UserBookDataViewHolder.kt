@@ -1,14 +1,14 @@
-package com.sirekanyan.knigopis.feature.user
+package org.sirekanyan.knigopis.feature.user
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
-import com.sirekanyan.knigopis.common.extensions.setSquareImage
-import com.sirekanyan.knigopis.common.extensions.showNow
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
+import org.sirekanyan.knigopis.common.extensions.setSquareImage
+import org.sirekanyan.knigopis.common.extensions.showNow
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookModel
 
 class UserBookDataViewHolder(
     containerView: View,

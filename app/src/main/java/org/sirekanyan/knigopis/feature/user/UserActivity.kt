@@ -1,16 +1,16 @@
-package com.sirekanyan.knigopis.feature.user
+package org.sirekanyan.knigopis.feature.user
 
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.sirekanyan.knigopis.common.BaseActivity
-import com.sirekanyan.knigopis.common.extensions.systemClipboardManager
-import com.sirekanyan.knigopis.common.functions.extra
-import com.sirekanyan.knigopis.databinding.UserActivityBinding
-import com.sirekanyan.knigopis.dependency.providePresenter
-import com.sirekanyan.knigopis.feature.book.createBookIntent
-import com.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.common.BaseActivity
+import org.sirekanyan.knigopis.common.extensions.systemClipboardManager
+import org.sirekanyan.knigopis.common.functions.extra
+import org.sirekanyan.knigopis.databinding.UserActivityBinding
+import org.sirekanyan.knigopis.dependency.providePresenter
+import org.sirekanyan.knigopis.feature.book.createBookIntent
+import org.sirekanyan.knigopis.model.EditBookModel
 
 private val EXTRA_USER_ID = extra("user_id")
 private val EXTRA_USER_NAME = extra("user_name")

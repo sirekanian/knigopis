@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.dependency
+package org.sirekanyan.knigopis.dependency
 
-import com.sirekanyan.knigopis.feature.login.LoginActivity
-import com.sirekanyan.knigopis.feature.login.LoginPresenter
-import com.sirekanyan.knigopis.feature.login.LoginPresenterImpl
-import com.sirekanyan.knigopis.feature.login.LoginViewImpl
+import org.sirekanyan.knigopis.feature.login.LoginActivity
+import org.sirekanyan.knigopis.feature.login.LoginPresenter
+import org.sirekanyan.knigopis.feature.login.LoginPresenterImpl
+import org.sirekanyan.knigopis.feature.login.LoginViewImpl
 
 fun LoginActivity.providePresenter(): LoginPresenter =
     LoginPresenterImpl(this).also { presenter ->

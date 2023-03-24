@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.ResourceProvider
-import com.sirekanyan.knigopis.model.BookModel
-import com.sirekanyan.knigopis.model.createBookHeaderModel
-import com.sirekanyan.knigopis.model.dto.FinishedBook
-import com.sirekanyan.knigopis.model.dto.PlannedBook
-import com.sirekanyan.knigopis.model.toBookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.ResourceProvider
+import org.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.model.createBookHeaderModel
+import org.sirekanyan.knigopis.model.dto.FinishedBook
+import org.sirekanyan.knigopis.model.dto.PlannedBook
+import org.sirekanyan.knigopis.model.toBookModel
 
 interface BookOrganizer<T> {
 

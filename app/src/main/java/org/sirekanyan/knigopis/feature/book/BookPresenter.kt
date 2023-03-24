@@ -1,16 +1,16 @@
-package com.sirekanyan.knigopis.feature.book
+package org.sirekanyan.knigopis.feature.book
 
-import com.sirekanyan.knigopis.MAX_BOOK_PRIORITY
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.Presenter
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.common.extensions.toast
-import com.sirekanyan.knigopis.common.functions.createBookImageUrl
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.model.BookAction
-import com.sirekanyan.knigopis.model.DateModel
-import com.sirekanyan.knigopis.model.EditBookModel
+import org.sirekanyan.knigopis.MAX_BOOK_PRIORITY
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.Presenter
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.common.extensions.toast
+import org.sirekanyan.knigopis.common.functions.createBookImageUrl
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.model.BookAction
+import org.sirekanyan.knigopis.model.DateModel
+import org.sirekanyan.knigopis.model.EditBookModel
 import java.util.*
 
 interface BookPresenter : Presenter {

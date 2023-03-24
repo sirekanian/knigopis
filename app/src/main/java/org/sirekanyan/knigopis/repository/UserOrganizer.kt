@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
-import com.sirekanyan.knigopis.model.UserModel
-import com.sirekanyan.knigopis.model.dto.Subscription
-import com.sirekanyan.knigopis.model.toUserModel
-import com.sirekanyan.knigopis.repository.UserSorting.*
+import org.sirekanyan.knigopis.model.UserModel
+import org.sirekanyan.knigopis.model.dto.Subscription
+import org.sirekanyan.knigopis.model.toUserModel
+import org.sirekanyan.knigopis.repository.UserSorting.*
 
 class UserOrganizer(private val config: Configuration) {
 

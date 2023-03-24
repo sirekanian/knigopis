@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.feature.notes
+package org.sirekanyan.knigopis.feature.notes
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.SimpleItemCallback
-import com.sirekanyan.knigopis.common.extensions.inflate
-import com.sirekanyan.knigopis.model.NoteModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.SimpleItemCallback
+import org.sirekanyan.knigopis.common.extensions.inflate
+import org.sirekanyan.knigopis.model.NoteModel
 
 class NotesAdapter(
     private val onClick: (NoteModel) -> Unit

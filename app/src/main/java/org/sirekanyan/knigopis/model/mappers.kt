@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.model
+package org.sirekanyan.knigopis.model
 
 import android.text.format.DateUtils
-import com.sirekanyan.knigopis.MAX_BOOK_PRIORITY
-import com.sirekanyan.knigopis.MIN_BOOK_PRIORITY
-import com.sirekanyan.knigopis.common.functions.createBookImageUrl
-import com.sirekanyan.knigopis.common.functions.createUserImageUrl
-import com.sirekanyan.knigopis.common.functions.createUserPublicUrl
-import com.sirekanyan.knigopis.model.dto.*
+import org.sirekanyan.knigopis.MAX_BOOK_PRIORITY
+import org.sirekanyan.knigopis.MIN_BOOK_PRIORITY
+import org.sirekanyan.knigopis.common.functions.createBookImageUrl
+import org.sirekanyan.knigopis.common.functions.createUserImageUrl
+import org.sirekanyan.knigopis.common.functions.createUserPublicUrl
+import org.sirekanyan.knigopis.model.dto.*
 
 fun PlannedBook.toBookModel(group: BookGroupModel) =
     BookDataModel(

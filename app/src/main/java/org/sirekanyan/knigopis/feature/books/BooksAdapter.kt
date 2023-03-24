@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.feature.books
+package org.sirekanyan.knigopis.feature.books
 
 import android.view.ViewGroup
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.HeadedAdapter
-import com.sirekanyan.knigopis.common.extensions.inflate
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.HeadedAdapter
+import org.sirekanyan.knigopis.common.extensions.inflate
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookModel
 
 class BooksAdapter(
     private val onClick: (BookDataModel) -> Unit,

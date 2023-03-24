@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.feature
+package org.sirekanyan.knigopis.feature
 
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.extensions.hide
-import com.sirekanyan.knigopis.common.extensions.show
-import com.sirekanyan.knigopis.databinding.ActivityMainBinding
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.extensions.hide
+import org.sirekanyan.knigopis.common.extensions.show
+import org.sirekanyan.knigopis.databinding.ActivityMainBinding
 
 interface ProgressView {
 

@@ -1,15 +1,15 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
-import com.sirekanyan.knigopis.common.android.NetworkChecker
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookModel
-import com.sirekanyan.knigopis.model.dto.FinishedBook
-import com.sirekanyan.knigopis.model.dto.FinishedBookToSend
-import com.sirekanyan.knigopis.model.dto.PlannedBook
-import com.sirekanyan.knigopis.model.dto.PlannedBookToSend
-import com.sirekanyan.knigopis.repository.cache.CacheKey
-import com.sirekanyan.knigopis.repository.cache.CommonCache
-import com.sirekanyan.knigopis.repository.cache.genericType
+import org.sirekanyan.knigopis.common.android.NetworkChecker
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.model.dto.FinishedBook
+import org.sirekanyan.knigopis.model.dto.FinishedBookToSend
+import org.sirekanyan.knigopis.model.dto.PlannedBook
+import org.sirekanyan.knigopis.model.dto.PlannedBookToSend
+import org.sirekanyan.knigopis.repository.cache.CacheKey
+import org.sirekanyan.knigopis.repository.cache.CommonCache
+import org.sirekanyan.knigopis.repository.cache.genericType
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Maybe

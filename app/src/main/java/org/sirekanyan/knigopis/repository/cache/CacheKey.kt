@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.repository.cache
+package org.sirekanyan.knigopis.repository.cache
 
 enum class CacheKey {
 

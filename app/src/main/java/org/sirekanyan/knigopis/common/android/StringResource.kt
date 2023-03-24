@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.android
+package org.sirekanyan.knigopis.common.android
 
 import android.widget.TextView
 import androidx.annotation.StringRes

@@ -1,17 +1,17 @@
-package com.sirekanyan.knigopis.feature.users
+package org.sirekanyan.knigopis.feature.users
 
-import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
-import com.sirekanyan.knigopis.common.android.dialog.DialogItem
-import com.sirekanyan.knigopis.common.android.dialog.createDialogItem
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.hide
-import com.sirekanyan.knigopis.common.extensions.keepOnTop
-import com.sirekanyan.knigopis.common.extensions.show
-import com.sirekanyan.knigopis.common.functions.handleError
-import com.sirekanyan.knigopis.databinding.UsersPageBinding
-import com.sirekanyan.knigopis.feature.ProgressView
-import com.sirekanyan.knigopis.model.ProfileItem
-import com.sirekanyan.knigopis.model.UserModel
+import org.sirekanyan.knigopis.common.android.dialog.DialogFactory
+import org.sirekanyan.knigopis.common.android.dialog.DialogItem
+import org.sirekanyan.knigopis.common.android.dialog.createDialogItem
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.hide
+import org.sirekanyan.knigopis.common.extensions.keepOnTop
+import org.sirekanyan.knigopis.common.extensions.show
+import org.sirekanyan.knigopis.common.functions.handleError
+import org.sirekanyan.knigopis.databinding.UsersPageBinding
+import org.sirekanyan.knigopis.feature.ProgressView
+import org.sirekanyan.knigopis.model.ProfileItem
+import org.sirekanyan.knigopis.model.UserModel
 
 interface UsersView : CommonView<UsersPageBinding>, ProgressView {
 

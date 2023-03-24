@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.feature.books
+package org.sirekanyan.knigopis.feature.books
 
 import android.view.View
 import android.widget.TextView
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
-import com.sirekanyan.knigopis.model.BookHeaderModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.adapter.CommonViewHolder
+import org.sirekanyan.knigopis.model.BookHeaderModel
+import org.sirekanyan.knigopis.model.BookModel
 
 class BookHeaderViewHolder(containerView: View) : CommonViewHolder<BookModel>(containerView) {
 

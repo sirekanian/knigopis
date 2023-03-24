@@ -1,18 +1,18 @@
-package com.sirekanyan.knigopis.feature.users
+package org.sirekanyan.knigopis.feature.users
 
 import android.net.Uri
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.android.ResourceProvider
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.common.extensions.showProgressBar
-import com.sirekanyan.knigopis.common.extensions.toUriOrNull
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.feature.PagePresenter
-import com.sirekanyan.knigopis.feature.PagesPresenter
-import com.sirekanyan.knigopis.model.CurrentTab
-import com.sirekanyan.knigopis.model.ProfileItem
-import com.sirekanyan.knigopis.model.UserModel
-import com.sirekanyan.knigopis.repository.UserRepository
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.android.ResourceProvider
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.common.extensions.showProgressBar
+import org.sirekanyan.knigopis.common.extensions.toUriOrNull
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.feature.PagePresenter
+import org.sirekanyan.knigopis.feature.PagesPresenter
+import org.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.model.ProfileItem
+import org.sirekanyan.knigopis.model.UserModel
+import org.sirekanyan.knigopis.repository.UserRepository
 
 interface UsersPresenter : PagePresenter {
 

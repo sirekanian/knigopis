@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.feature
+package org.sirekanyan.knigopis.feature
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -8,24 +8,24 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.BaseActivity
-import com.sirekanyan.knigopis.common.extensions.app
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.common.extensions.showToast
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.databinding.ActivityMainBinding
-import com.sirekanyan.knigopis.dependency.providePresenter
-import com.sirekanyan.knigopis.feature.book.createBookIntent
-import com.sirekanyan.knigopis.feature.books.BooksPresenter
-import com.sirekanyan.knigopis.feature.login.startLoginActivity
-import com.sirekanyan.knigopis.feature.notes.NotesPresenter
-import com.sirekanyan.knigopis.feature.profile.createProfileIntent
-import com.sirekanyan.knigopis.feature.user.createUserIntent
-import com.sirekanyan.knigopis.feature.users.UsersPresenter
-import com.sirekanyan.knigopis.feature.users.getMainState
-import com.sirekanyan.knigopis.feature.users.saveMainState
-import com.sirekanyan.knigopis.model.*
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.BaseActivity
+import org.sirekanyan.knigopis.common.extensions.app
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.common.extensions.showToast
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.databinding.ActivityMainBinding
+import org.sirekanyan.knigopis.dependency.providePresenter
+import org.sirekanyan.knigopis.feature.book.createBookIntent
+import org.sirekanyan.knigopis.feature.books.BooksPresenter
+import org.sirekanyan.knigopis.feature.login.startLoginActivity
+import org.sirekanyan.knigopis.feature.notes.NotesPresenter
+import org.sirekanyan.knigopis.feature.profile.createProfileIntent
+import org.sirekanyan.knigopis.feature.user.createUserIntent
+import org.sirekanyan.knigopis.feature.users.UsersPresenter
+import org.sirekanyan.knigopis.feature.users.getMainState
+import org.sirekanyan.knigopis.feature.users.saveMainState
+import org.sirekanyan.knigopis.model.*
 
 fun Context.startMainActivity() {
     startActivity(

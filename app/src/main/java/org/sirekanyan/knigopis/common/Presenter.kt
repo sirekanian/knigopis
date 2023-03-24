@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common
+package org.sirekanyan.knigopis.common
 
 interface Presenter {
     fun stop()

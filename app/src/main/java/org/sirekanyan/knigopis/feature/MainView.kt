@@ -1,28 +1,28 @@
-package com.sirekanyan.knigopis.feature
+package org.sirekanyan.knigopis.feature
 
 import android.content.Context.MODE_PRIVATE
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.sirekanyan.knigopis.BuildConfig
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.menu.OptionItem
-import com.sirekanyan.knigopis.common.android.menu.addAll
-import com.sirekanyan.knigopis.common.android.menu.getOption
-import com.sirekanyan.knigopis.common.android.menu.optionIds
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.context
-import com.sirekanyan.knigopis.common.extensions.hide
-import com.sirekanyan.knigopis.common.extensions.isNightMode
-import com.sirekanyan.knigopis.common.extensions.show
-import com.sirekanyan.knigopis.databinding.ActivityMainBinding
-import com.sirekanyan.knigopis.model.CurrentTab
-import com.sirekanyan.knigopis.model.CurrentTab.*
-import com.sirekanyan.knigopis.repository.BookSorting
-import com.sirekanyan.knigopis.repository.Theme
-import com.sirekanyan.knigopis.repository.UserSorting
-import com.sirekanyan.knigopis.repository.cache.COMMON_PREFS_NAME
+import org.sirekanyan.knigopis.BuildConfig
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.menu.OptionItem
+import org.sirekanyan.knigopis.common.android.menu.addAll
+import org.sirekanyan.knigopis.common.android.menu.getOption
+import org.sirekanyan.knigopis.common.android.menu.optionIds
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.context
+import org.sirekanyan.knigopis.common.extensions.hide
+import org.sirekanyan.knigopis.common.extensions.isNightMode
+import org.sirekanyan.knigopis.common.extensions.show
+import org.sirekanyan.knigopis.databinding.ActivityMainBinding
+import org.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.model.CurrentTab.*
+import org.sirekanyan.knigopis.repository.BookSorting
+import org.sirekanyan.knigopis.repository.Theme
+import org.sirekanyan.knigopis.repository.UserSorting
+import org.sirekanyan.knigopis.repository.cache.COMMON_PREFS_NAME
 
 private val DEBUG_OPTIONS = arrayOf(R.id.debug_option_clear_cache, R.id.debug_option_toggle_theme)
 

@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.feature.user.behavior
+package org.sirekanyan.knigopis.feature.user.behavior
 
 class SimpleViewState(
     val x: Int,

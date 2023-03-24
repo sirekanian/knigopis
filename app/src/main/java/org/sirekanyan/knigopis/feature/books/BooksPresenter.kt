@@ -1,16 +1,16 @@
-package com.sirekanyan.knigopis.feature.books
+package org.sirekanyan.knigopis.feature.books
 
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.common.extensions.showProgressBar
-import com.sirekanyan.knigopis.common.extensions.toast
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.feature.PagePresenter
-import com.sirekanyan.knigopis.feature.PagesPresenter
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.CurrentTab
-import com.sirekanyan.knigopis.repository.BookRepository
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.common.extensions.showProgressBar
+import org.sirekanyan.knigopis.common.extensions.toast
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.feature.PagePresenter
+import org.sirekanyan.knigopis.feature.PagesPresenter
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.repository.BookRepository
 
 interface BooksPresenter : PagePresenter {
 

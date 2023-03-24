@@ -1,13 +1,13 @@
-package com.sirekanyan.knigopis.feature.notes
+package org.sirekanyan.knigopis.feature.notes
 
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.hide
-import com.sirekanyan.knigopis.common.extensions.keepOnTop
-import com.sirekanyan.knigopis.common.extensions.show
-import com.sirekanyan.knigopis.common.functions.handleError
-import com.sirekanyan.knigopis.databinding.NotesPageBinding
-import com.sirekanyan.knigopis.feature.ProgressView
-import com.sirekanyan.knigopis.model.NoteModel
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.hide
+import org.sirekanyan.knigopis.common.extensions.keepOnTop
+import org.sirekanyan.knigopis.common.extensions.show
+import org.sirekanyan.knigopis.common.functions.handleError
+import org.sirekanyan.knigopis.databinding.NotesPageBinding
+import org.sirekanyan.knigopis.feature.ProgressView
+import org.sirekanyan.knigopis.model.NoteModel
 
 interface NotesView : CommonView<NotesPageBinding>, ProgressView {
 

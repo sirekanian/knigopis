@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis
+package org.sirekanyan.knigopis
 
 const val MAIN_API = "https://api.knigopis.com"
 const val MAIN_WWW = "https://www.knigopis.com"

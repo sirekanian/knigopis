@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.feature.user
+package org.sirekanyan.knigopis.feature.user
 
-import com.sirekanyan.knigopis.common.android.ResourceProvider
-import com.sirekanyan.knigopis.common.extensions.io2main
-import com.sirekanyan.knigopis.model.BookModel
-import com.sirekanyan.knigopis.model.createBookHeaderModel
-import com.sirekanyan.knigopis.model.toBookModel
-import com.sirekanyan.knigopis.repository.Endpoint
+import org.sirekanyan.knigopis.common.android.ResourceProvider
+import org.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.model.createBookHeaderModel
+import org.sirekanyan.knigopis.model.toBookModel
+import org.sirekanyan.knigopis.repository.Endpoint
 import io.reactivex.Completable
 import io.reactivex.Single
 

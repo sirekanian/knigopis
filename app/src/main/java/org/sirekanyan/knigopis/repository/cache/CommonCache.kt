@@ -1,11 +1,11 @@
-package com.sirekanyan.knigopis.repository.cache
+package org.sirekanyan.knigopis.repository.cache
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
-import com.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.common.functions.logError
 import io.reactivex.Completable
 import io.reactivex.Maybe
 import java.lang.reflect.Type

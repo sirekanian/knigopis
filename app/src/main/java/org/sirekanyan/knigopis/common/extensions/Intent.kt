@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.extensions
+package org.sirekanyan.knigopis.common.extensions
 
 import android.content.Intent
 import android.os.Build

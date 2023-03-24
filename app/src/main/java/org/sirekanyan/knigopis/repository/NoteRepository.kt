@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
-import com.sirekanyan.knigopis.common.android.NetworkChecker
-import com.sirekanyan.knigopis.model.NoteModel
-import com.sirekanyan.knigopis.model.dto.Note
-import com.sirekanyan.knigopis.model.toNoteModel
-import com.sirekanyan.knigopis.repository.cache.CacheKey
-import com.sirekanyan.knigopis.repository.cache.CommonCache
-import com.sirekanyan.knigopis.repository.cache.genericType
+import org.sirekanyan.knigopis.common.android.NetworkChecker
+import org.sirekanyan.knigopis.model.NoteModel
+import org.sirekanyan.knigopis.model.dto.Note
+import org.sirekanyan.knigopis.model.toNoteModel
+import org.sirekanyan.knigopis.repository.cache.CacheKey
+import org.sirekanyan.knigopis.repository.cache.CommonCache
+import org.sirekanyan.knigopis.repository.cache.genericType
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Maybe

@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
-import com.sirekanyan.knigopis.common.extensions.io2main
+import org.sirekanyan.knigopis.common.extensions.io2main
 import io.reactivex.Completable
 
 interface AuthRepository {

@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis.common.functions
+package org.sirekanyan.knigopis.common.functions
 
-import com.sirekanyan.knigopis.BuildConfig.APPLICATION_ID
-import com.sirekanyan.knigopis.MAIN_WWW
-import com.sirekanyan.knigopis.STATIC_API
+import org.sirekanyan.knigopis.BuildConfig.APPLICATION_ID
+import org.sirekanyan.knigopis.MAIN_WWW
+import org.sirekanyan.knigopis.STATIC_API
 
 fun extra(name: String) = "$APPLICATION_ID.extra_$name"
 

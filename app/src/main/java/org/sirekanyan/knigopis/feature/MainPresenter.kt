@@ -1,12 +1,12 @@
-package com.sirekanyan.knigopis.feature
+package org.sirekanyan.knigopis.feature
 
-import com.sirekanyan.knigopis.common.BasePresenter
-import com.sirekanyan.knigopis.common.Presenter
-import com.sirekanyan.knigopis.common.functions.logError
-import com.sirekanyan.knigopis.feature.users.MainPresenterState
-import com.sirekanyan.knigopis.model.CurrentTab
-import com.sirekanyan.knigopis.model.CurrentTab.*
-import com.sirekanyan.knigopis.repository.*
+import org.sirekanyan.knigopis.common.BasePresenter
+import org.sirekanyan.knigopis.common.Presenter
+import org.sirekanyan.knigopis.common.functions.logError
+import org.sirekanyan.knigopis.feature.users.MainPresenterState
+import org.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.model.CurrentTab.*
+import org.sirekanyan.knigopis.repository.*
 import org.acra.ACRA
 
 interface MainPresenter : Presenter {

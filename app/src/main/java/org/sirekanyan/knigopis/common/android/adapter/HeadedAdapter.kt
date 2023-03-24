@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.android.adapter
+package org.sirekanyan.knigopis.common.android.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil

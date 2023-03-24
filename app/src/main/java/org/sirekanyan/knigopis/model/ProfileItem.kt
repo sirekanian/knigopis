@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis.model
+package org.sirekanyan.knigopis.model
 
 import android.net.Uri
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.ResourceProvider
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.ResourceProvider
 
 class ProfileItem(val uri: Uri, resource: ResourceProvider) {
     private val social = uri.toSocialNetwork()

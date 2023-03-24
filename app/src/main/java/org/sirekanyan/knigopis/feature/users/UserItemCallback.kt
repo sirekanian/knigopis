@@ -1,7 +1,7 @@
-package com.sirekanyan.knigopis.feature.users
+package org.sirekanyan.knigopis.feature.users
 
 import androidx.recyclerview.widget.DiffUtil
-import com.sirekanyan.knigopis.model.UserModel
+import org.sirekanyan.knigopis.model.UserModel
 
 class UserItemCallback : DiffUtil.ItemCallback<UserModel>() {
 

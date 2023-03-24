@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.feature
+package org.sirekanyan.knigopis.feature
 
-import com.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.model.CurrentTab
 
 interface PagesPresenter {
     fun onPageUpdated(tab: CurrentTab)

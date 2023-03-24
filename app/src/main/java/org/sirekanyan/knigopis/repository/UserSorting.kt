@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
 import androidx.annotation.IdRes
 import androidx.annotation.StringRes
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.menu.OptionItem
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.menu.OptionItem
 
 enum class UserSorting(
     @IdRes override val id: Int,

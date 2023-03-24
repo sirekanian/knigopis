@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common
+package org.sirekanyan.knigopis.common
 
 import io.reactivex.Completable
 import io.reactivex.Flowable

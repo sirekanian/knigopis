@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.repository.config
+package org.sirekanyan.knigopis.repository.config
 
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import android.util.Log
-import com.sirekanyan.knigopis.repository.ConfigurationImpl
+import org.sirekanyan.knigopis.repository.ConfigurationImpl
 import kotlin.reflect.KProperty
 
 class PreferenceDelegate<T>(

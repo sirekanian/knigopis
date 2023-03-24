@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.common.extensions
+package org.sirekanyan.knigopis.common.extensions
 
-import com.sirekanyan.knigopis.feature.ProgressView
+import org.sirekanyan.knigopis.feature.ProgressView
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Observable

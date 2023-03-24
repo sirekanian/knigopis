@@ -1,15 +1,15 @@
-package com.sirekanyan.knigopis.feature.profile
+package org.sirekanyan.knigopis.feature.profile
 
 import android.view.MenuItem
 import android.view.animation.AccelerateInterpolator
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.Toolbar
-import com.sirekanyan.knigopis.R
-import com.sirekanyan.knigopis.common.android.toast.CommonView
-import com.sirekanyan.knigopis.common.extensions.*
-import com.sirekanyan.knigopis.databinding.ProfileActivityBinding
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.ProfileModel
+import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.toast.CommonView
+import org.sirekanyan.knigopis.common.extensions.*
+import org.sirekanyan.knigopis.databinding.ProfileActivityBinding
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.ProfileModel
 import java.util.*
 
 interface ProfileView : CommonView<ProfileActivityBinding> {

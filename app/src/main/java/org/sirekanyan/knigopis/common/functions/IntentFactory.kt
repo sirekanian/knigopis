@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis.common.functions
+package org.sirekanyan.knigopis.common.functions
 
 import android.content.Context
 import android.content.Intent
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 
 private const val TEXT_MIME_TYPE = "text/plain"
 

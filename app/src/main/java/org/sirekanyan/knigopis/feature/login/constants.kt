@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login
 
 import android.net.Uri
-import com.sirekanyan.knigopis.BuildConfig.*
-import com.sirekanyan.knigopis.common.extensions.RANDOM_ID
+import org.sirekanyan.knigopis.BuildConfig.*
+import org.sirekanyan.knigopis.common.extensions.RANDOM_ID
 
 val LOGIN_CALLBACK_URI: Uri =
     Uri.Builder()

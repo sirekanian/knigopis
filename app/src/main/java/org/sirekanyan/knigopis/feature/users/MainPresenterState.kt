@@ -1,7 +1,7 @@
-package com.sirekanyan.knigopis.feature.users
+package org.sirekanyan.knigopis.feature.users
 
 import android.os.Bundle
-import com.sirekanyan.knigopis.model.CurrentTab
+import org.sirekanyan.knigopis.model.CurrentTab
 
 private const val CURRENT_TAB_KEY = "current_tab"
 

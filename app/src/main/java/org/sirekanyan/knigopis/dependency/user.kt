@@ -1,7 +1,7 @@
-package com.sirekanyan.knigopis.dependency
+package org.sirekanyan.knigopis.dependency
 
-import com.sirekanyan.knigopis.common.extensions.app
-import com.sirekanyan.knigopis.feature.user.*
+import org.sirekanyan.knigopis.common.extensions.app
+import org.sirekanyan.knigopis.feature.user.*
 
 fun UserActivity.providePresenter(id: String, name: String): UserPresenter {
     val interactor = UserInteractorImpl(app.endpoint, app.resourceProvider)

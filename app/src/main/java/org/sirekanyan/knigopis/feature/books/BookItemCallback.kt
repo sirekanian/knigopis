@@ -1,9 +1,9 @@
-package com.sirekanyan.knigopis.feature.books
+package org.sirekanyan.knigopis.feature.books
 
 import androidx.recyclerview.widget.DiffUtil
-import com.sirekanyan.knigopis.model.BookDataModel
-import com.sirekanyan.knigopis.model.BookHeaderModel
-import com.sirekanyan.knigopis.model.BookModel
+import org.sirekanyan.knigopis.model.BookDataModel
+import org.sirekanyan.knigopis.model.BookHeaderModel
+import org.sirekanyan.knigopis.model.BookModel
 
 class BookItemCallback : DiffUtil.ItemCallback<BookModel>() {
 

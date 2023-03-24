@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.repository.network
+package org.sirekanyan.knigopis.repository.network
 
-import com.sirekanyan.knigopis.repository.TokenStorage
+import org.sirekanyan.knigopis.repository.TokenStorage
 import okhttp3.Interceptor
 import okhttp3.Interceptor.Chain
 import okhttp3.Response

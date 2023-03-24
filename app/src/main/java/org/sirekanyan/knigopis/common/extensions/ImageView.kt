@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.common.extensions
+package org.sirekanyan.knigopis.common.extensions
 
 import android.content.Context
 import android.graphics.ColorMatrix
@@ -16,7 +16,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.request.transition.DrawableCrossFadeTransition
 import com.bumptech.glide.request.transition.TransitionFactory
-import com.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.R
 
 private const val DARK_SATURATION = 0.33f
 private val crossFadeTransitionFactory = TransitionFactory { _, _ ->

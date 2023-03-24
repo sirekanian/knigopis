@@ -1,8 +1,8 @@
-package com.sirekanyan.knigopis.dependency
+package org.sirekanyan.knigopis.dependency
 
 import android.app.Activity
-import com.sirekanyan.knigopis.common.android.dialog.BottomSheetDialogFactory
-import com.sirekanyan.knigopis.common.android.dialog.DialogFactory
+import org.sirekanyan.knigopis.common.android.dialog.BottomSheetDialogFactory
+import org.sirekanyan.knigopis.common.android.dialog.DialogFactory
 
 fun Activity.provideDialogs(): DialogFactory =
     BottomSheetDialogFactory(this)

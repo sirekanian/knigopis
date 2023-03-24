@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import com.sirekanyan.knigopis.common.extensions.app
-import com.sirekanyan.knigopis.databinding.LoginActivityBinding
-import com.sirekanyan.knigopis.dependency.providePresenter
-import com.sirekanyan.knigopis.feature.startMainActivity
+import org.sirekanyan.knigopis.common.extensions.app
+import org.sirekanyan.knigopis.databinding.LoginActivityBinding
+import org.sirekanyan.knigopis.dependency.providePresenter
+import org.sirekanyan.knigopis.feature.startMainActivity
 
 private const val MARKET_URI = "market://details?id="
 private const val GOOGLE_PLAY_URI = "https://play.google.com/store/apps/details?id="

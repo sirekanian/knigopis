@@ -1,4 +1,4 @@
-package com.sirekanyan.knigopis.model
+package org.sirekanyan.knigopis.model
 
 import android.text.SpannableString
 import android.text.style.SuperscriptSpan

@@ -1,6 +1,6 @@
-package com.sirekanyan.knigopis.repository
+package org.sirekanyan.knigopis.repository
 
-import com.sirekanyan.knigopis.model.dto.*
+import org.sirekanyan.knigopis.model.dto.*
 import io.reactivex.Completable
 import io.reactivex.Single
 import retrofit2.http.*
