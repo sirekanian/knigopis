@@ -8,5 +8,15 @@ Android app for [knigopis.com](https://www.knigopis.com)
 [![Get it on F-Droid](https://img.shields.io/f-droid/v/{{applicationId}}.svg)](https://f-droid.org/en/packages/{{applicationId}}/)
 [![Get it on GitHub](https://img.shields.io/github/release/{{repository}}.svg)](https://github.com/{{repository}}/releases/latest)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="app/src/main/play/listings/en-US/graphics/phone-screenshots/1.png">
+  <img src="app/src/main/play/listings/en-US/graphics/phone-screenshots/3.png">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="app/src/main/play/listings/en-US/graphics/phone-screenshots/2.png">
+  <img src="app/src/main/play/listings/en-US/graphics/phone-screenshots/4.png">
+</picture>
+
 <a href='https://f-droid.org/en/packages/{{applicationId}}/'><img height='100' alt='Get it on F-Droid' src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png'/></a>
 <a href='https://play.google.com/store/apps/details?id={{applicationId}}'><img height='100' alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
