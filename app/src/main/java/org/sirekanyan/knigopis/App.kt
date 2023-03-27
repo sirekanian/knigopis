@@ -3,10 +3,6 @@ package org.sirekanyan.knigopis
 import android.app.Application
 import android.content.Context
 import org.sirekanyan.knigopis.dependency.*
-import org.acra.ACRA
-import org.acra.config.CoreConfigurationBuilder
-import org.acra.config.HttpSenderConfigurationBuilder
-import org.acra.sender.HttpSender
 
 class App : Application() {
 
@@ -30,6 +26,7 @@ class App : Application() {
     }
 
     private fun initCrashReporting() {
+        /* todo: crash reporting
         val httpSenderConfig = HttpSenderConfigurationBuilder()
             .withUri("https://collector.tracepot.com/93c9aa62")
             .withHttpMethod(HttpSender.Method.POST)
@@ -40,6 +37,7 @@ class App : Application() {
             .withPluginConfigurations(httpSenderConfig)
             .build()
         ACRA.init(this, config)
+        */
     }
 
     override fun onCreate() {

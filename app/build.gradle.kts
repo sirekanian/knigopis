@@ -72,8 +72,8 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
     implementation("com.github.bumptech.glide:glide:4.15.1")
 
-    // crash reporting
-    implementation("ch.acra:acra-http:5.9.7")
+    // todo: crash reporting
+    // implementation("ch.acra:acra-http:5.9.7")
 }
 
 task("updateReadme") {

@@ -7,7 +7,6 @@ import org.sirekanyan.knigopis.feature.users.MainPresenterState
 import org.sirekanyan.knigopis.model.CurrentTab
 import org.sirekanyan.knigopis.model.CurrentTab.*
 import org.sirekanyan.knigopis.repository.*
-import org.acra.ACRA
 
 interface MainPresenter : Presenter {
 
@@ -143,9 +142,6 @@ class MainPresenterImpl(
 
     override fun onCrashReportOptionClicked(isChecked: Boolean) {
         config.crashReportEnabled = isChecked
-        if (!isChecked) {
-            ACRA.errorReporter.handleException(Exception("Crash reporting was disabled"))
-        }
     }
 
     override fun onThemeOptionClicked(theme: Theme) {

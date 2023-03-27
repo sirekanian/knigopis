@@ -1,7 +1,6 @@
 package org.sirekanyan.knigopis.common.functions
 
 import android.util.Log
-import org.acra.ACRA
 
 private const val TAG = "Knigopis"
 
@@ -9,6 +8,7 @@ private const val TAG = "Knigopis"
 fun logWarn(message: String) = Log.w(TAG, message)
 
 fun logError(message: String, throwable: Throwable?): Int {
-    ACRA.errorReporter.handleException(throwable)
+    // todo: crash reporting
+    // ACRA.errorReporter.handleException(throwable)
     return Log.e(TAG, message, throwable)
 }
