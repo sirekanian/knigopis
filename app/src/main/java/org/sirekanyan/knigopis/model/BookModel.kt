@@ -14,12 +14,12 @@ fun createBookHeaderModel(resources: ResourceProvider, title: String, count: Int
 sealed class BookModel(
     val id: String,
     override val isHeader: Boolean,
-    val group: BookGroupModel
+    val group: BookGroupModel,
 ) : HeadedModel
 
 class BookHeaderModel(
     val title: String,
-    val count: String
+    val count: String,
 ) : BookModel("header-id-$title", true, BookGroupModel(title, count))
 
 class BookDataModel(
@@ -30,7 +30,7 @@ class BookDataModel(
     val isFinished: Boolean,
     val priority: Int,
     val date: DateModel,
-    val notes: String
+    val notes: String,
 ) : BookModel(id, false, group) {
     val image = createBookImageUrl(title)
 }

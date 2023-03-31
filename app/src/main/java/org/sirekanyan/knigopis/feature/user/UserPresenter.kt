@@ -34,7 +34,7 @@ class UserPresenterImpl(
     private val auth: AuthRepository,
     private val userId: String,
     private val userName: String,
-    private val resources: ResourceProvider
+    private val resources: ResourceProvider,
 ) : BasePresenter<UserView>(),
     UserPresenter,
     UserView.Callbacks {

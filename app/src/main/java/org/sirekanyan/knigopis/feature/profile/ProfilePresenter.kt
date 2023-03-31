@@ -24,7 +24,7 @@ interface ProfilePresenter : Presenter {
 
 class ProfilePresenterImpl(
     private val router: ProfilePresenter.Router,
-    private val interactor: ProfileInteractor
+    private val interactor: ProfileInteractor,
 ) : BasePresenter<ProfileView>(),
     ProfilePresenter,
     ProfileView.Callbacks {

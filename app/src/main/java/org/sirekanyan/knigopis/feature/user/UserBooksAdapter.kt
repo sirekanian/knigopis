@@ -9,7 +9,7 @@ import org.sirekanyan.knigopis.model.BookDataModel
 import org.sirekanyan.knigopis.model.BookModel
 
 class UserBooksAdapter(
-    private val onLongClick: (BookDataModel) -> Unit
+    private val onLongClick: (BookDataModel) -> Unit,
 ) : HeadedAdapter<BookModel>(SimpleItemCallback { it.id }) {
 
     override fun onCreateHeaderViewHolder(parent: ViewGroup) =

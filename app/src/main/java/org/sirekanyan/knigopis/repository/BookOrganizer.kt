@@ -21,7 +21,7 @@ interface BookOrganizer<T> {
 
 class PlannedBookOrganizerImpl(
     private val resources: ResourceProvider,
-    private val config: Configuration
+    private val config: Configuration,
 ) : BookOrganizer<PlannedBook> {
 
     override fun sort(books: List<PlannedBook>): List<PlannedBook> =
@@ -55,7 +55,7 @@ class PlannedBookOrganizerImpl(
 
 class FinishedBookOrganizerImpl(
     private val resources: ResourceProvider,
-    private val config: Configuration
+    private val config: Configuration,
 ) : BookOrganizer<FinishedBook> {
 
     override fun sort(books: List<FinishedBook>): List<FinishedBook> =

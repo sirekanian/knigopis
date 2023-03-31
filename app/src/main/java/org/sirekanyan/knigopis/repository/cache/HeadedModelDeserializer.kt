@@ -9,13 +9,13 @@ import java.lang.reflect.Type
 
 class HeadedModelDeserializer<T : HeadedModel>(
     private val headerType: Type,
-    private val dataType: Type
+    private val dataType: Type,
 ) : JsonDeserializer<T> {
 
     override fun deserialize(
         json: JsonElement,
         type: Type,
-        context: JsonDeserializationContext
+        context: JsonDeserializationContext,
     ): T {
         json as JsonObject
         val isHeader = json.get("isHeader").asBoolean

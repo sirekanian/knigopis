@@ -26,7 +26,7 @@ private val crossFadeTransitionFactory = TransitionFactory { _, _ ->
 private fun ImageView.setImage(
     url: String?,
     requestOptions: RequestOptions,
-    @DrawableRes placeholderRes: Int
+    @DrawableRes placeholderRes: Int,
 ) {
     if (context.isNightMode) {
         val colorMatrix = ColorMatrix().apply { setSaturation(DARK_SATURATION) }
@@ -73,7 +73,7 @@ fun Context.preloadImage(url: String?, onSuccess: () -> Unit, onError: () -> Uni
                 model: Any?,
                 target: Target<Drawable>?,
                 dataSource: DataSource?,
-                isFirstResource: Boolean
+                isFirstResource: Boolean,
             ): Boolean {
                 onSuccess()
                 return false
@@ -83,7 +83,7 @@ fun Context.preloadImage(url: String?, onSuccess: () -> Unit, onError: () -> Uni
                 e: GlideException?,
                 model: Any?,
                 target: Target<Drawable>?,
-                isFirstResource: Boolean
+                isFirstResource: Boolean,
             ): Boolean {
                 onError()
                 return false

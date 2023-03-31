@@ -8,7 +8,7 @@ import org.sirekanyan.knigopis.common.extensions.inflate
 import org.sirekanyan.knigopis.model.NoteModel
 
 class NotesAdapter(
-    private val onClick: (NoteModel) -> Unit
+    private val onClick: (NoteModel) -> Unit,
 ) : ListAdapter<NoteModel, NoteViewHolder>(SimpleItemCallback(NoteModel::id)) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

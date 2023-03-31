@@ -24,7 +24,7 @@ interface CommonCache {
 
 class CommonCacheImpl(
     context: Context,
-    private val gson: Gson
+    private val gson: Gson,
 ) : CommonCache {
 
     private val prefs = context.getSharedPreferences(COMMON_PREFS_NAME, MODE_PRIVATE)

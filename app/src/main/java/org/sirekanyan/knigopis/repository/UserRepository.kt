@@ -20,7 +20,7 @@ class UserRepositoryImpl(
     private val api: Endpoint,
     private val cache: CommonCache,
     private val organizer: UserOrganizer,
-    networkChecker: NetworkChecker
+    networkChecker: NetworkChecker,
 ) : CommonRepository<List<UserModel>>(networkChecker),
     UserRepository {
 

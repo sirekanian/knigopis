@@ -7,7 +7,7 @@ import org.sirekanyan.knigopis.common.android.menu.OptionItem
 
 enum class BookSorting(
     @IdRes override val id: Int,
-    @StringRes override val title: Int
+    @StringRes override val title: Int,
 ) : OptionItem {
 
     DEFAULT(R.id.option_sort_by_time, R.string.main_option_sort_by_time),

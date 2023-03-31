@@ -9,5 +9,5 @@ class NoteModel(
     val noteDate: String,
     val userId: String,
     val userName: String,
-    val userImage: String?
+    val userImage: String?,
 )

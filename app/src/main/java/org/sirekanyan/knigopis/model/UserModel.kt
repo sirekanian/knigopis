@@ -9,7 +9,7 @@ class UserModel(
     val image: String?,
     val booksCount: Int?,
     val newBooksCount: Int?,
-    val profiles: List<String>
+    val profiles: List<String>,
 ) {
 
     val newBooksCountFormatted: SpannableString?

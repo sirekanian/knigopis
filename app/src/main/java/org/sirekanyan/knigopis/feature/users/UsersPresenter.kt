@@ -26,7 +26,7 @@ interface UsersPresenter : PagePresenter {
 class UsersPresenterImpl(
     private val router: UsersPresenter.Router,
     private val userRepository: UserRepository,
-    private val resources: ResourceProvider
+    private val resources: ResourceProvider,
 ) : BasePresenter<UsersView>(),
     UsersPresenter,
     UsersView.Callbacks {

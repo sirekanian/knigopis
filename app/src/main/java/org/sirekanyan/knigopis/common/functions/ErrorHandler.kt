@@ -13,7 +13,7 @@ fun handleError(
     throwable: Throwable,
     emptyPlaceholder: View,
     errorPlaceholder: TextView,
-    adapter: RecyclerView.Adapter<*>
+    adapter: RecyclerView.Adapter<*>,
 ) {
     if (emptyPlaceholder.isVisible || adapter.itemCount > 0) {
         emptyPlaceholder.context.showToast(throwable.messageRes)

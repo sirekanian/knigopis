@@ -20,7 +20,7 @@ interface NotesPresenter : PagePresenter {
 
 class NotesPresenterImpl(
     private val router: NotesPresenter.Router,
-    private val noteRepository: NoteRepository
+    private val noteRepository: NoteRepository,
 ) : BasePresenter<NotesView>(),
     NotesPresenter,
     NotesView.Callbacks {

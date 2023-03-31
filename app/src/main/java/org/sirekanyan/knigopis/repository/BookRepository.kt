@@ -35,7 +35,7 @@ class BookRepositoryImpl(
     private val cache: CommonCache,
     private val plannedBookOrganizer: BookOrganizer<PlannedBook>,
     private val finishedBookOrganizer: BookOrganizer<FinishedBook>,
-    networkChecker: NetworkChecker
+    networkChecker: NetworkChecker,
 ) : CommonRepository<List<BookModel>>(networkChecker),
     BookRepository {
 

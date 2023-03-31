@@ -28,7 +28,7 @@ class MainPresenterImpl(
     private val pagePresenters: Map<CurrentTab, PagePresenter>,
     private val router: MainPresenter.Router,
     private val config: Configuration,
-    private val auth: AuthRepository
+    private val auth: AuthRepository,
 ) : BasePresenter<MainView>(*pagePresenters.values.toTypedArray()),
     MainPresenter,
     MainView.Callbacks,

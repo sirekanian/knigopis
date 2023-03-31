@@ -10,7 +10,7 @@ fun Uri.toSocialNetwork() = SocialNetwork.values().find { host in it.hosts }
 enum class SocialNetwork(
     @StringRes val titleRes: Int,
     @DrawableRes val iconRes: Int,
-    vararg val hosts: String
+    vararg val hosts: String,
 ) {
     FACEBOOK(R.string.common_social_facebook, R.drawable.ic_social_facebook, "www.facebook.com"),
     INSTAGRAM(R.string.common_social_instagram, R.drawable.ic_social_instagram, "instagram.com", "www.instagram.com"),

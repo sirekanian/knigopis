@@ -27,7 +27,7 @@ interface ProfileInteractor {
 class ProfileInteractorImpl(
     private val api: Endpoint,
     private val bookRepository: BookRepository,
-    private val tokenStorage: TokenStorage
+    private val tokenStorage: TokenStorage,
 ) : ProfileInteractor {
 
     override fun getProfile(): Single<ProfileModel> =

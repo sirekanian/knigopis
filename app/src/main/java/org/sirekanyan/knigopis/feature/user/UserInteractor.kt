@@ -23,7 +23,7 @@ interface UserInteractor {
 
 class UserInteractorImpl(
     private val api: Endpoint,
-    private val resources: ResourceProvider
+    private val resources: ResourceProvider,
 ) : UserInteractor {
 
     override fun addFriend(userId: String) =

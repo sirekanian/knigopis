@@ -21,7 +21,7 @@ interface NoteRepository {
 class NoteRepositoryImpl(
     private val api: Endpoint,
     private val cache: CommonCache,
-    networkChecker: NetworkChecker
+    networkChecker: NetworkChecker,
 ) : CommonRepository<List<NoteModel>>(networkChecker),
     NoteRepository {
 

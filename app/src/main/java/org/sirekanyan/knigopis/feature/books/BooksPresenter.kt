@@ -23,7 +23,7 @@ interface BooksPresenter : PagePresenter {
 
 class BooksPresenterImpl(
     private val router: BooksPresenter.Router,
-    private val bookRepository: BookRepository
+    private val bookRepository: BookRepository,
 ) : BasePresenter<BooksView>(),
     BooksPresenter,
     BooksView.Callbacks {

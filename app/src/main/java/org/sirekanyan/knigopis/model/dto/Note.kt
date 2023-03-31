@@ -8,7 +8,7 @@ class Note(
     val author: String,
     val notes: String,
     private val createdAt: Date,
-    val user: Identity
+    val user: Identity,
 ) {
     // TODO https://trello.com/c/UymHYoPK
     val fixedCreatedAt

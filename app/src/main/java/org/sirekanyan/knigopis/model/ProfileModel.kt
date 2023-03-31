@@ -5,5 +5,5 @@ data class ProfileModel(
     val name: String,
     val imageUrl: String?,
     val profileUrl: String,
-    val shareUrl: String
+    val shareUrl: String,
 )

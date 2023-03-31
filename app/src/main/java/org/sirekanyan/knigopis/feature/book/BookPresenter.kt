@@ -26,7 +26,7 @@ interface BookPresenter : Presenter {
 class BookPresenterImpl(
     private val router: BookPresenter.Router,
     private val interactor: BookInteractor,
-    private val initialBook: EditBookModel
+    private val initialBook: EditBookModel,
 ) : BasePresenter<BookView>(),
     BookPresenter,
     BookView.Callbacks {

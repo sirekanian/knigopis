@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 
 abstract class HeadedAdapter<T : HeadedModel>(
-    itemCallback: DiffUtil.ItemCallback<T>
+    itemCallback: DiffUtil.ItemCallback<T>,
 ) : ListAdapter<T, CommonViewHolder<T>>(itemCallback) {
 
     private companion object {

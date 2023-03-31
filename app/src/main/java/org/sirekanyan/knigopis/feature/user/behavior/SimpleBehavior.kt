@@ -11,7 +11,7 @@ import kotlin.math.min
 @Suppress("unused")
 class SimpleBehavior(
     context: Context,
-    attrs: AttributeSet
+    attrs: AttributeSet,
 ) : CoordinatorLayout.Behavior<View>(context, attrs) {
 
     private val dependViewId = R.id.user_app_bar
@@ -32,7 +32,7 @@ class SimpleBehavior(
     override fun onDependentViewChanged(
         parent: CoordinatorLayout,
         child: View,
-        dependency: View
+        dependency: View,
     ): Boolean {
         val ratio = abs(dependency.y) / (maxHeight - minHeight)
         getHelper(child.simpleState).updateDimensions(child, min(1f, ratio))

@@ -11,7 +11,7 @@ interface AuthRepository {
 
 class AuthRepositoryImpl(
     private val api: Endpoint,
-    private val storage: TokenStorage
+    private val storage: TokenStorage,
 ) : AuthRepository {
 
     override fun isAuthorized(): Boolean =

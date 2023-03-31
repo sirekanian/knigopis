@@ -8,7 +8,7 @@ import org.sirekanyan.knigopis.model.UserModel
 
 class UsersAdapter(
     private val onClick: (UserModel) -> Unit,
-    private val onLongClick: (UserModel) -> Unit
+    private val onLongClick: (UserModel) -> Unit,
 ) : ListAdapter<UserModel, UserViewHolder>(UserItemCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
