@@ -5,13 +5,13 @@
     android:id="@+id/booksPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/toolbar_height"
     tools:ignore="MergeRootFrame">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/booksRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/toolbar_height"
         android:clipToPadding="false"
         android:paddingTop="0.1dp"
         android:paddingBottom="56dp"
