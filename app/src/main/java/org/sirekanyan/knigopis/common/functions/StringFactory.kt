@@ -12,7 +12,7 @@ fun createUserImageUrl(userId: String) = "$STATIC_API/user/$userId"
 
 fun createBookImageUrl(bookTitle: String): String {
     val normalizedTitle = bookTitle.lowercase()
-        .replace(Regex("\\W+"), "_")
+        .replace(Regex("[^\\w-]+"), "_")
         .replace(Regex("(^_|_$)"), "")
         .replace("ё", "е")
     return "$STATIC_API/book/$normalizedTitle"
