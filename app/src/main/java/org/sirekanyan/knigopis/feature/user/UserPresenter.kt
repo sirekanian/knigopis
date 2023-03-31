@@ -13,6 +13,7 @@ import org.sirekanyan.knigopis.model.BookDataModel
 import org.sirekanyan.knigopis.model.EditBookModel
 import org.sirekanyan.knigopis.model.createDoneBook
 import org.sirekanyan.knigopis.model.createTodoBook
+import org.sirekanyan.knigopis.repository.AuthRepository
 
 interface UserPresenter : Presenter {
 
@@ -30,6 +31,7 @@ interface UserPresenter : Presenter {
 class UserPresenterImpl(
     private val router: UserPresenter.Router,
     private val interactor: UserInteractor,
+    private val auth: AuthRepository,
     private val userId: String,
     private val userName: String,
     private val resources: ResourceProvider
@@ -89,7 +91,11 @@ class UserPresenterImpl(
     }
 
     override fun onBookLongClicked(book: BookDataModel) {
-        view.showActionsDialog(book.title, book.author, book)
+        if (auth.isAuthorized()) {
+            view.showActionsDialog(book.title, book.author, book)
+        } else {
+            view.toast(R.string.user_error_unauthorized)
+        }
     }
 
     override fun onTodoActionClicked(book: BookDataModel) {

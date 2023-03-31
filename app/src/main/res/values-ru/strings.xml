@@ -116,6 +116,7 @@
     <string name="user.option.unsubscribe">Отписаться</string>
     <string name="user.info.copied">Скопировано: %s</string>
     <string name="user.error.unsubscribe">Не удалось отписаться</string>
+    <string name="user.error.unauthorized">Выполните вход, чтобы добавить книгу</string>
 
     <!-- 🖍 notes tab -->
     <string name="notes.error.empty">Нет новых комментариев</string>

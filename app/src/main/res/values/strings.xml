@@ -115,6 +115,7 @@
     <string name="user.option.unsubscribe">Unsubscribe</string>
     <string name="user.info.copied">Copied: %s</string>
     <string name="user.error.unsubscribe">Cannot unsubscribe</string>
+    <string name="user.error.unauthorized">Log in to add books</string>
 
     <!-- 🖍 notes tab -->
     <string name="notes.error.empty">No one is posted yet</string>
