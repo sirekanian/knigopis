@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+
+export ANDROID_HOME="tmp/AndroidSdk"
+export ANDROID_AVD_HOME="tmp/AndroidAvd"
+export ANDROID_EMULATOR_HOME="tmp/AndroidEmu"
+
+mkdir -p "$ANDROID_HOME"
+mkdir -p "$ANDROID_AVD_HOME"
+mkdir -p "$ANDROID_EMULATOR_HOME"
+
+case "$(uname -s)" in
+  Linux*) machine=linux ;;
+  *) machine=mac ;;
+esac
+
+download() {
+  output="tmp/$(basename "$2")"
+  if [ ! -f "$output" ]; then
+    wget "$2" -O "$output"
+  fi
+  eval $1="$output"
+}
+
+download cmdtools "https://dl.google.com/android/repository/commandlinetools-$machine-9477386_latest.zip"
+download firefox "https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-v111.1.1/fenix-111.1.1-x86_64.apk"
+
+TOOLS="$ANDROID_HOME/cmdline-tools/latest"
+if [ ! -d "$TOOLS" ]; then
+  unzip -oq "$cmdtools"
+  mkdir -p "$ANDROID_HOME/cmdline-tools"
+  mv "cmdline-tools" "$TOOLS"
+fi
+
+SDKM="$TOOLS/bin/sdkmanager"
+AVDM="$TOOLS/bin/avdmanager"
+ADB="$ANDROID_HOME/platform-tools/adb"
+EMU="$ANDROID_HOME/emulator/emulator -no-audio -no-snapshot -gpu swiftshader_indirect -no-boot-anim"
+
+if [ "$1" != "window" ]; then
+  EMU="$EMU -no-window"
+fi
+
+if [ "$1" = "stop" ]; then
+  killall qemu-system-x86_64 qemu-system-x86_64-headless || true
+  $AVDM delete avd -n "my_emulator"
+  exit 0
+fi
+
+yes | $SDKM --licenses || true
+PACKAGE="system-images;android-31;default;x86_64"
+$SDKM "platform-tools" "platforms;android-31" "$PACKAGE"
+$AVDM create avd -f -n "my_emulator" -b "default/x86_64" -k "$PACKAGE" -d "pixel_3a"
+grep -q 'Boot completed' <($EMU -avd "my_emulator")
+echo "Boot completed!"
+
+while [ -z "$($ADB devices | grep emulator | grep device)" ]; do
+  $ADB devices
+  sleep 5
+done
+
+$ADB devices
+sleep 5
+
+$ADB install "$firefox"
+$ADB uninstall --user 0 "org.chromium.webview_shell"

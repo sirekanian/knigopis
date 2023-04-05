@@ -21,6 +21,10 @@ android {
             buildConfigField("String", key, "\"$value\"")
         }
         vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        System.getenv("TEST_TOKEN")?.let {
+            testInstrumentationRunnerArguments.put("testToken", it)
+        }
     }
     buildTypes {
         getByName("release") {
@@ -75,6 +79,11 @@ dependencies {
 
     // todo: crash reporting
     // implementation("ch.acra:acra-http:5.9.7")
+
+    // tests
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.2.0")
 }
 
 task("updateReadme") {
