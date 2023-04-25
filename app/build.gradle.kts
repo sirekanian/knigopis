@@ -7,11 +7,11 @@ plugins {
 
 android {
     namespace = "org.sirekanyan.knigopis"
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "org.sirekanyan.knigopis"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = (property("appVersionCode") as String).toInt()
         versionName = property("appVersionName") as String
         setProperty("archivesBaseName", "$applicationId-$versionName-$versionCode")
@@ -42,6 +42,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    kotlin {
+        jvmToolchain(8)
+    }
     kotlinOptions {
         allWarningsAsErrors = true
     }
@@ -49,6 +52,7 @@ android {
         warningsAsErrors = true
     }
     buildFeatures {
+        buildConfig = true
         viewBinding = true
     }
 }
@@ -75,7 +79,7 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:3.14.9")
 
     // etc
-    implementation("com.google.android.material:material:1.8.0")
+    implementation("com.google.android.material:material:1.9.0")
     implementation("com.github.bumptech.glide:glide:4.15.1")
 
     // todo: crash reporting
