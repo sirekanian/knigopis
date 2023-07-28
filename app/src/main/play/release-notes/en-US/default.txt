@@ -1,3 +1,9 @@
+v1.0.4
+- Minor bugfixes
+
+v1.0.3
+- Removed optional crash reporting
+
 v1.0.2
 - Fixed displaying images
 
