@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -14,7 +16,7 @@ android {
         targetSdk = 34
         versionCode = (property("appVersionCode") as String).toInt()
         versionName = property("appVersionName") as String
-        setProperty("archivesBaseName", "$applicationId-$versionName-$versionCode")
+        archivesName.set("$applicationId-$versionName-$versionCode")
         manifestPlaceholders["LOGIN_CALLBACK_SCHEME"] = "e270636c0efc6cad95130113d3bbafc3"
         manifestPlaceholders["LOGIN_CALLBACK_HOST"] = "532b8e7fc54c52b6df5b55181acc241a"
         manifestPlaceholders["LOGIN_CALLBACK_PATH"] = "$versionCode"
@@ -62,7 +64,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-    implementation("androidx.browser:browser:1.5.0")
+    implementation("androidx.browser:browser:1.6.0")
 
     // rxjava
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
@@ -80,10 +82,10 @@ dependencies {
 
     // etc
     implementation("com.google.android.material:material:1.9.0")
-    implementation("com.github.bumptech.glide:glide:4.15.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // todo: crash reporting
-    // implementation("ch.acra:acra-http:5.9.7")
+    // implementation("ch.acra:acra-http:5.11.1")
 
     // tests
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

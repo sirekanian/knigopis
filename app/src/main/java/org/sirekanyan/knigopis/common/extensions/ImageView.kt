@@ -69,10 +69,10 @@ fun Context.preloadImage(url: String?, onSuccess: () -> Unit, onError: () -> Uni
         .load(url)
         .listener(object : RequestListener<Drawable> {
             override fun onResourceReady(
-                resource: Drawable?,
-                model: Any?,
+                resource: Drawable,
+                model: Any,
                 target: Target<Drawable>?,
-                dataSource: DataSource?,
+                dataSource: DataSource,
                 isFirstResource: Boolean,
             ): Boolean {
                 onSuccess()
@@ -82,7 +82,7 @@ fun Context.preloadImage(url: String?, onSuccess: () -> Unit, onError: () -> Uni
             override fun onLoadFailed(
                 e: GlideException?,
                 model: Any?,
-                target: Target<Drawable>?,
+                target: Target<Drawable>,
                 isFirstResource: Boolean,
             ): Boolean {
                 onError()

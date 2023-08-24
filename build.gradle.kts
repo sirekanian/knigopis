@@ -5,9 +5,9 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.1.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
-        classpath("org.sirekanyan:version-checker:1.0.7")
+        classpath("com.android.tools.build:gradle:8.1.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10")
+        classpath("org.sirekanyan:version-checker:1.0.8")
     }
 }
 
