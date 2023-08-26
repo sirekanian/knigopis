@@ -111,7 +111,7 @@ task("updateReadme") {
             "versionCode" to defaultConfig.versionCode?.toString(),
             "minSdkVersion" to defaultConfig.minSdkVersion?.apiLevel?.toString(),
             "targetSdkVersion" to defaultConfig.targetSdkVersion?.apiLevel?.toString(),
-            "repository" to "sirekanyan/knigopis"
+            "repository" to "sirekanian/knigopis",
         )
         properties.forEach { (key, value) ->
             if (value.isNullOrBlank()) {

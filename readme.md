@@ -9,14 +9,14 @@ Android app for [knigopis.com](https://www.knigopis.com)
 [![Get it on GitHub](https://img.shields.io/github/release/{{repository}}.svg)](https://github.com/{{repository}}/releases/latest)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="app/src/main/play/listings/en-US/graphics/phone-screenshots/1.png">
-  <img src="app/src/main/play/listings/en-US/graphics/phone-screenshots/3.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://sirekanyan.org/screenshots/knigopis-dark.png">
+  <img src="https://sirekanyan.org/screenshots/knigopis.png">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="app/src/main/play/listings/en-US/graphics/phone-screenshots/2.png">
-  <img src="app/src/main/play/listings/en-US/graphics/phone-screenshots/4.png">
-</picture>
+[![Get it on Google Play][1]][2]
+[![Get it on F-Droid][3]][4]
 
-<a href='https://f-droid.org/en/packages/{{applicationId}}/'><img height='100' alt='Get it on F-Droid' src='https://fdroid.gitlab.io/artwork/badge/get-it-on.png'/></a>
-<a href='https://play.google.com/store/apps/details?id={{applicationId}}'><img height='100' alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+[1]: https://sirekanyan.org/badge/play.png
+[2]: https://play.google.com/store/apps/details?id={{applicationId}}
+[3]: https://sirekanyan.org/badge/fdroid.png
+[4]: https://f-droid.org/en/packages/{{applicationId}}/
