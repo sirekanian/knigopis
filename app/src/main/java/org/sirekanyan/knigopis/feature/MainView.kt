@@ -148,6 +148,7 @@ class MainViewImpl(
         notesPage.show(tab == NOTES_TAB)
         toolbar.menu.findItem(R.id.option_sort_books).isVisible = tab == BOOKS_TAB
         toolbar.menu.findItem(R.id.option_sort_users).isVisible = tab == USERS_TAB
+        toolbar.menu.findItem(R.id.option_crash_report).isVisible = BuildConfig.ACRA_ENABLED
     }
 
     override fun showNavigation(isVisible: Boolean) {

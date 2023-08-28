@@ -59,12 +59,10 @@
         android:title="@string/main.option.about"
         app:showAsAction="never" />
 
-    <!-- todo: crash reporting -->
     <item
         android:id="@+id/option_crash_report"
         android:checkable="true"
         android:title="@string/main.option.crash_report"
-        android:visible="false"
         app:showAsAction="never" />
 
     <!-- for debug only -->

@@ -142,6 +142,9 @@ class MainPresenterImpl(
 
     override fun onCrashReportOptionClicked(isChecked: Boolean) {
         config.crashReportEnabled = isChecked
+        if (!isChecked) {
+            logError("Crash reporting was disabled", throwable = null)
+        }
     }
 
     override fun onThemeOptionClicked(theme: Theme) {

@@ -27,6 +27,10 @@ android {
         manifestPlaceholders.forEach { (key, value) ->
             buildConfigField("String", key, "\"$value\"")
         }
+        buildConfigField("boolean", "ACRA_ENABLED", "${findProperty("crashReporter") == "acra"}")
+        buildConfigField("String", "ACRA_URI", "\"${System.getenv("ACRA_URI")}\"")
+        buildConfigField("String", "ACRA_LOGIN", "\"${System.getenv("ACRA_LOGIN")}\"")
+        buildConfigField("String", "ACRA_PASSWORD", "\"${System.getenv("ACRA_PASSWORD")}\"")
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         System.getenv("TEST_TOKEN")?.let {
@@ -93,8 +97,8 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // todo: crash reporting
-    // implementation("ch.acra:acra-http:5.11.1")
+    // crash reporting
+    implementation("ch.acra:acra-http:5.11.1")
 
     // tests
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
