@@ -25,15 +25,23 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - shell: bash
-        run: ./gradlew assembleRelease
-      - shell: bash
-        run: ./gradlew bundleRelease
+        env:
+          SIGNING_KEYSTORE_FILE: release.keystore
+          SIGNING_KEYSTORE_BASE64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
+          SIGNING_KEYSTORE_PASSWORD: ${{ secrets.SIGNING_KEYSTORE_PASSWORD }}
+          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+        run: |
+          base64 --decode <<< "$SIGNING_KEYSTORE_BASE64" > app/release.keystore
+          mkdir -p release-files
+          ./gradlew assembleRelease bundleRelease -PsigningConfig=release
+          mv app/build/outputs/*/release/*release* release-files
       - if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            app/build/outputs/apk/release/*-release*.apk
-            app/build/outputs/bundle/release/*-release.aab
+            release-files/*release*.apk
+            release-files/*release*.aab
   tests:
     runs-on: macos-latest
     steps:
