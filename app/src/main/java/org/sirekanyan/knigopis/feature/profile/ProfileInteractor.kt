@@ -19,6 +19,7 @@ interface ProfileInteractor {
 
     fun getProfile(): Single<ProfileModel>
     fun getBooks(): Observable<BookDataModel>
+    fun getBooksForExport(): Single<String>
     fun updateProfile(profile: ProfileModel): Completable
     fun logout()
 
@@ -28,6 +29,7 @@ class ProfileInteractorImpl(
     private val api: Endpoint,
     private val bookRepository: BookRepository,
     private val tokenStorage: TokenStorage,
+    private val exportFormatter: ExportFormatter,
 ) : ProfileInteractor {
 
     override fun getProfile(): Single<ProfileModel> =
@@ -48,6 +50,11 @@ class ProfileInteractorImpl(
             }
             .map { (book) -> book }
             .io2main()
+
+    override fun getBooksForExport(): Single<String> =
+        bookRepository.findCached().toSingle(listOf()).map {
+            exportFormatter.formatBooksForExport(it.filterIsInstance<BookDataModel>())
+        }
 
     override fun updateProfile(profile: ProfileModel): Completable =
         api.updateProfile(profile.id, profile.toProfile())

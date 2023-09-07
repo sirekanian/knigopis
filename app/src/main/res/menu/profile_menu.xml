@@ -16,6 +16,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/option_export_profile"
+        android:title="@string/profile.option.export"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/option_logout_profile"
         android:title="@string/profile.option.logout"
         app:showAsAction="never" />

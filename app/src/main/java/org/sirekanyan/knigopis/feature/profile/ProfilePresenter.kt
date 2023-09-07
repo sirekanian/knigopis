@@ -16,7 +16,7 @@ interface ProfilePresenter : Presenter {
     fun back()
 
     interface Router {
-        fun shareProfile(profileUrl: String)
+        fun shareText(content: String)
         fun exit()
     }
 
@@ -72,7 +72,21 @@ class ProfilePresenterImpl(
     }
 
     override fun onShareOptionClicked() {
-        profile?.shareUrl?.let(router::shareProfile)
+        profile?.shareUrl?.let(router::shareText)
+    }
+
+    override fun onExportOptionClicked() {
+        interactor.getBooksForExport()
+            .bind({ content ->
+                if (content.isBlank()) {
+                    view.toast(R.string.profile_export_empty)
+                } else {
+                    router.shareText(content)
+                }
+            }, {
+                view.toast(R.string.profile_export_error)
+                logError("cannot export books", it)
+            })
     }
 
     override fun onLogoutOptionClicked() {

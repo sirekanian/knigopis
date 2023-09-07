@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import org.sirekanyan.knigopis.common.BaseActivity
-import org.sirekanyan.knigopis.common.functions.createProfileShareIntent
+import org.sirekanyan.knigopis.common.functions.createTextShareIntent
 import org.sirekanyan.knigopis.databinding.ProfileActivityBinding
 import org.sirekanyan.knigopis.dependency.providePresenter
 
@@ -31,8 +31,8 @@ class ProfileActivity : BaseActivity(), ProfilePresenter.Router {
         presenter.stop()
     }
 
-    override fun shareProfile(profileUrl: String) {
-        startActivity(createProfileShareIntent(profileUrl))
+    override fun shareText(content: String) {
+        startActivity(createTextShareIntent(content))
     }
 
     override fun exit() {

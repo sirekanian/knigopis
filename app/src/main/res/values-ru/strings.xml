@@ -69,9 +69,11 @@
     <string name="profile.option.edit">Изменить</string>
     <string name="profile.option.save">Сохранить</string>
     <string name="profile.option.share">Поделиться</string>
+    <string name="profile.option.export">Экспорт"</string>
     <string name="profile.option.logout">Выйти</string>
     <string name="profile.error.save">Не удалось обновить имя</string>
-    <string name="profile.title.share">Отправить ссылку на профиль</string>
+    <string name="profile.export.empty">Нет книг для экспорта</string>
+    <string name="profile.export.error">Ошибка при экспорте</string>
 
     <!-- 🏠 books tab -->
     <string name="books.error.empty">У вас пока нет книг</string>

@@ -68,9 +68,11 @@
     <string name="profile.option.edit">Edit</string>
     <string name="profile.option.save">Save</string>
     <string name="profile.option.share">Share</string>
+    <string name="profile.option.export">Export</string>
     <string name="profile.option.logout">Logout</string>
     <string name="profile.error.save">Cannot update profile</string>
-    <string name="profile.title.share">Share your profile</string>
+    <string name="profile.export.empty">Nothing to export</string>
+    <string name="profile.export.error">Cannot export books</string>
 
     <!-- 🏠 books tab -->
     <string name="books.error.empty">You don\'t have any books</string>

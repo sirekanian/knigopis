@@ -34,6 +34,7 @@ interface ProfileView : CommonView<ProfileActivityBinding> {
         fun onEditOptionClicked()
         fun onSaveOptionClicked(nickname: String)
         fun onShareOptionClicked()
+        fun onExportOptionClicked()
         fun onLogoutOptionClicked()
     }
 
@@ -148,6 +149,10 @@ class ProfileViewImpl(
                 }
                 R.id.option_share_profile -> {
                     callbacks.onShareOptionClicked()
+                    true
+                }
+                R.id.option_export_profile -> {
+                    callbacks.onExportOptionClicked()
                     true
                 }
                 R.id.option_logout_profile -> {
