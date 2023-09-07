@@ -59,4 +59,4 @@ jobs:
       - if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          path: app/build/reports/androidTests/connected/*.html
+          path: app/build/reports/androidTests/connected/**/*.html

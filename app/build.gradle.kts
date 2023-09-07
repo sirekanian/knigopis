@@ -30,7 +30,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         System.getenv("TEST_TOKEN")?.let {
-            testInstrumentationRunnerArguments.put("testToken", it)
+            testInstrumentationRunnerArguments["testToken"] = it
         }
     }
     buildTypes {
