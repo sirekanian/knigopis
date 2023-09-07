@@ -16,7 +16,7 @@ class BookDataViewHolder(
     onLongClick: (BookDataModel) -> Unit,
 ) : CommonViewHolder<BookModel>(containerView) {
 
-    private val resources = containerView.resources
+    private val resources = containerView.resourceProvider
     private val bookImage = containerView.findViewById<ImageView>(R.id.bookImage)
     private val bookTitle = containerView.findViewById<TextView>(R.id.bookTitle)
     private val bookAuthor = containerView.findViewById<TextView>(R.id.bookAuthor)

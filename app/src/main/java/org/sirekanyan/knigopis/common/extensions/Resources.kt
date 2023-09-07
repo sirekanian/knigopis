@@ -1,15 +1,15 @@
 package org.sirekanyan.knigopis.common.extensions
 
-import android.content.res.Resources
 import org.sirekanyan.knigopis.R
+import org.sirekanyan.knigopis.common.android.ResourceProvider
 
-fun Resources.getTitleString(title: String): String =
+fun ResourceProvider.getTitleString(title: String): String =
     title.ifEmpty { getString(R.string.common_book_notitle) }
 
-fun Resources.getAuthorString(author: String): String =
+fun ResourceProvider.getAuthorString(author: String): String =
     author.ifEmpty { getString(R.string.common_book_noauthor) }
 
-fun Resources.getFullTitleString(title: String, author: String): String =
+fun ResourceProvider.getFullTitleString(title: String, author: String): String =
     if (author.isEmpty()) {
         getTitleString(title)
     } else {

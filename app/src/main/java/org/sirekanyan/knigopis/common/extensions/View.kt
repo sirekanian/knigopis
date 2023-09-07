@@ -3,6 +3,9 @@ package org.sirekanyan.knigopis.common.extensions
 import android.view.View
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
+import org.sirekanyan.knigopis.App
+
+val View.resourceProvider get() = (context.applicationContext as App).resourceProvider
 
 val View.isVisible get() = visibility == View.VISIBLE
 

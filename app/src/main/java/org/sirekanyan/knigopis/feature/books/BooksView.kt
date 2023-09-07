@@ -51,7 +51,7 @@ class BooksViewImpl(
     init {
         booksRecyclerView.adapter = booksAdapter
         booksRecyclerView.addItemDecoration(HeaderItemDecoration(StickyHeaderImpl(booksAdapter)))
-        booksRecyclerView.addOnScrollListener(FabOnScrollListener(resources, addBookButton))
+        booksRecyclerView.addOnScrollListener(FabOnScrollListener(containerView.resources, addBookButton))
         addBookButton.setOnClickListener { callbacks.onAddBookClicked() }
     }
 
