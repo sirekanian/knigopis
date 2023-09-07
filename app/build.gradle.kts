@@ -7,6 +7,10 @@ plugins {
     id("org.sirekanyan.version-checker")
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
     namespace = "org.sirekanyan.knigopis"
     compileSdk = 34
@@ -51,10 +55,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlin {
-        jvmToolchain(8)
-    }
     kotlinOptions {
+        jvmTarget = "1.8"
         allWarningsAsErrors = true
     }
     lint {
