@@ -17,6 +17,7 @@ import org.sirekanyan.knigopis.common.extensions.hide
 import org.sirekanyan.knigopis.common.extensions.isNightMode
 import org.sirekanyan.knigopis.common.extensions.show
 import org.sirekanyan.knigopis.databinding.ActivityMainBinding
+import org.sirekanyan.knigopis.isPlayFlavor
 import org.sirekanyan.knigopis.model.CurrentTab
 import org.sirekanyan.knigopis.model.CurrentTab.*
 import org.sirekanyan.knigopis.repository.BookSorting
@@ -148,7 +149,7 @@ class MainViewImpl(
         notesPage.show(tab == NOTES_TAB)
         toolbar.menu.findItem(R.id.option_sort_books).isVisible = tab == BOOKS_TAB
         toolbar.menu.findItem(R.id.option_sort_users).isVisible = tab == USERS_TAB
-        toolbar.menu.findItem(R.id.option_crash_report).isVisible = BuildConfig.ACRA_ENABLED
+        toolbar.menu.findItem(R.id.option_crash_report).isVisible = isPlayFlavor()
     }
 
     override fun showNavigation(isVisible: Boolean) {

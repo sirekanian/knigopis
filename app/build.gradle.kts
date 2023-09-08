@@ -104,7 +104,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // crash reporting
-    implementation("ch.acra:acra-http:5.11.1")
+    add("playImplementation", "ch.acra:acra-http:5.11.1")
 
     // tests
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

@@ -2,11 +2,11 @@ package org.sirekanyan.knigopis
 
 import android.app.Application
 import android.content.Context
-import org.acra.ACRA
-import org.acra.config.CoreConfigurationBuilder
-import org.acra.config.HttpSenderConfigurationBuilder
-import org.acra.sender.HttpSender
 import org.sirekanyan.knigopis.dependency.*
+
+@Suppress("KotlinConstantConditions")
+fun isPlayFlavor(): Boolean =
+    BuildConfig.FLAVOR == "play"
 
 class App : Application() {
 
@@ -24,24 +24,7 @@ class App : Application() {
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-        if (config.crashReportEnabled) {
-            initCrashReporting()
-        }
-    }
-
-    private fun initCrashReporting() {
-        val httpSenderConfig = HttpSenderConfigurationBuilder()
-            .withUri(BuildConfig.ACRA_URI)
-            .withHttpMethod(HttpSender.Method.POST)
-            .withBasicAuthLogin(BuildConfig.ACRA_LOGIN)
-            .withBasicAuthPassword(BuildConfig.ACRA_PASSWORD)
-            .withEnabled(BuildConfig.ACRA_ENABLED)
-            .build()
-        val config = CoreConfigurationBuilder()
-            .withBuildConfigClass(BuildConfig::class.java)
-            .withPluginConfigurations(httpSenderConfig)
-            .build()
-        ACRA.init(this, config)
+        CrashReporter.init(this)
     }
 
     override fun onCreate() {
