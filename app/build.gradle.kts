@@ -27,10 +27,6 @@ android {
         manifestPlaceholders.forEach { (key, value) ->
             buildConfigField("String", key, "\"$value\"")
         }
-        buildConfigField("boolean", "ACRA_ENABLED", "${findProperty("crashReporter") == "acra"}")
-        buildConfigField("String", "ACRA_URI", "\"${System.getenv("ACRA_URI")}\"")
-        buildConfigField("String", "ACRA_LOGIN", "\"${System.getenv("ACRA_LOGIN")}\"")
-        buildConfigField("String", "ACRA_PASSWORD", "\"${System.getenv("ACRA_PASSWORD")}\"")
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         System.getenv("TEST_TOKEN")?.let {
@@ -42,17 +38,27 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard")
-            if (findProperty("signingConfig") == "release") {
-                signingConfig = signingConfigs.create("release") {
-                    storeFile(file(System.getenv("SIGNING_KEYSTORE_FILE")))
-                    storePassword(System.getenv("SIGNING_KEYSTORE_PASSWORD"))
-                    keyAlias(System.getenv("SIGNING_KEY_ALIAS"))
-                    keyPassword(System.getenv("SIGNING_KEY_PASSWORD"))
-                }
-            }
         }
         getByName("debug") {
             applicationIdSuffix = ".debug"
+        }
+    }
+    flavorDimensions += "store"
+    productFlavors {
+        create("fdroid") {
+            dimension = "store"
+            signingConfig = signingConfigs.create("release") {
+                storeFile = System.getenv("SIGNING_KEYSTORE_FILE")?.let(::file)
+                storePassword = System.getenv("SIGNING_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("SIGNING_KEY_ALIAS")
+                keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
+            }
+        }
+        create("play") {
+            dimension = "store"
+            listOf("ACRA_URI", "ACRA_LOGIN", "ACRA_PASSWORD").forEach { key ->
+                buildConfigField("String", key, System.getenv(key)?.let { "\"$it\"" } ?: "null")
+            }
         }
     }
     compileOptions {
