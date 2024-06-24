@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.pm20.util.archivesName
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -11,16 +9,23 @@ kotlin {
     jvmToolchain(17)
 }
 
+private val appPackageName = property("appPackageName") as String
+private val appVersionName = property("appVersionName") as String
+private val appVersionCode = property("appVersionCode") as String
+
+base {
+    archivesName.set("$appPackageName-$appVersionName-$appVersionCode")
+}
+
 android {
-    namespace = "org.sirekanyan.knigopis"
+    namespace = appPackageName
     compileSdk = 34
     defaultConfig {
-        applicationId = "org.sirekanyan.knigopis"
+        applicationId = appPackageName
         minSdk = 21
         targetSdk = 34
-        versionCode = (property("appVersionCode") as String).toInt()
-        versionName = property("appVersionName") as String
-        archivesName.set("$applicationId-$versionName-$versionCode")
+        versionName = appVersionName
+        versionCode = appVersionCode.toInt()
         manifestPlaceholders["LOGIN_CALLBACK_SCHEME"] = "e270636c0efc6cad95130113d3bbafc3"
         manifestPlaceholders["LOGIN_CALLBACK_HOST"] = "532b8e7fc54c52b6df5b55181acc241a"
         manifestPlaceholders["LOGIN_CALLBACK_PATH"] = "$versionCode"
@@ -80,10 +85,10 @@ android {
 
 dependencies {
     // androidx libraries
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-    implementation("androidx.browser:browser:1.6.0")
+    implementation("androidx.browser:browser:1.8.0")
 
     // rxjava
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
@@ -91,25 +96,25 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
 
     // retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava2:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
     // okhttp
     @Suppress("GradleDependency")
     implementation("com.squareup.okhttp3:logging-interceptor:3.14.9")
 
     // etc
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // crash reporting
-    add("playImplementation", "ch.acra:acra-http:5.11.1")
+    add("playImplementation", "ch.acra:acra-http:5.11.3")
 
     // tests
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.2.0")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 }
 
 versionCheckerOptions {
