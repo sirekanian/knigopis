@@ -86,7 +86,7 @@ android {
 dependencies {
     // androidx libraries
     implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("androidx.browser:browser:1.8.0")
 
@@ -96,9 +96,9 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
 
     // retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava2:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.retrofit2:retrofit:2.12.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava2:2.12.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.12.0")
 
     // okhttp
     @Suppress("GradleDependency")
@@ -109,16 +109,17 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // crash reporting
-    add("playImplementation", "ch.acra:acra-http:5.11.3")
+    add("playImplementation", "ch.acra:acra-http:5.12.0")
 
     // tests
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 }
 
 versionCheckerOptions {
     "com.squareup.okhttp3:logging-interceptor" lessThan "4.0"
+    "com.squareup.retrofit2" lessThan "3.0"
 }
 
 task("updateReadme") {
