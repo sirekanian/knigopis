@@ -39,8 +39,9 @@ class ProfileActivity : BaseActivity(), ProfilePresenter.Router {
         finish()
     }
 
-    @Suppress("OVERRIDE_DEPRECATION")
+    @Suppress("OVERRIDE_DEPRECATION", "DEPRECATION")
     override fun onBackPressed() {
+        super.onBackPressed()
         presenter.back()
     }
 

@@ -13,7 +13,7 @@ class PlainStringResource(private val text: String) : StringResource {
     }
 }
 
-class IdStringResource(@StringRes private val textRes: Int) : StringResource {
+class IdStringResource(@all:StringRes private val textRes: Int) : StringResource {
     override fun setValueTo(view: TextView) {
         view.setText(textRes)
     }

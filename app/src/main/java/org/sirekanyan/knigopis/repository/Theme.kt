@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.NightMode
 import org.sirekanyan.knigopis.R
 
-enum class Theme(@IdRes val id: Int, @NightMode val mode: Int) {
+enum class Theme(@all:IdRes val id: Int, @all:NightMode val mode: Int) {
 
     LIGHT(
         R.id.option_light_theme,
@@ -35,10 +35,10 @@ enum class Theme(@IdRes val id: Int, @NightMode val mode: Int) {
     companion object {
 
         fun getById(@IdRes id: Int): Theme =
-            values().find { it.id == id } ?: DEFAULT
+            entries.find { it.id == id } ?: DEFAULT
 
         fun getCurrent(): Theme =
-            values().find { it.mode == AppCompatDelegate.getDefaultNightMode() } ?: DEFAULT
+            entries.find { it.mode == AppCompatDelegate.getDefaultNightMode() } ?: DEFAULT
 
     }
 

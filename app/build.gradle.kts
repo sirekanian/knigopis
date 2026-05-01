@@ -1,12 +1,10 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-parcelize")
     id("org.sirekanyan.version-checker")
-}
-
-kotlin {
-    jvmToolchain(17)
 }
 
 private val appPackageName = property("appPackageName") as String
@@ -17,13 +15,23 @@ base {
     archivesName.set("$appPackageName-$appVersionName-$appVersionCode")
 }
 
+kotlin {
+    jvmToolchain(21)
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_11
+        allWarningsAsErrors = true
+        freeCompilerArgs.add("-Xannotation-target-all")
+    }
+}
+
 android {
     namespace = appPackageName
-    compileSdk = 34
+    compileSdk = 36
     defaultConfig {
         applicationId = appPackageName
-        minSdk = 21
-        targetSdk = 34
+        minSdk = 23
+        //noinspection OldTargetApi
+        targetSdk = 35
         versionName = appVersionName
         versionCode = appVersionCode.toInt()
         manifestPlaceholders["LOGIN_CALLBACK_SCHEME"] = "e270636c0efc6cad95130113d3bbafc3"
@@ -67,12 +75,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-        allWarningsAsErrors = true
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     lint {
         warningsAsErrors = true
@@ -85,10 +89,10 @@ android {
 
 dependencies {
     // androidx libraries
-    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-    implementation("androidx.browser:browser:1.8.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0")
+    implementation("androidx.browser:browser:1.10.0")
 
     // rxjava
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
@@ -96,24 +100,27 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
 
     // retrofit
+    //noinspection NewerVersionAvailable
     implementation("com.squareup.retrofit2:retrofit:2.12.0")
+    //noinspection NewerVersionAvailable
     implementation("com.squareup.retrofit2:adapter-rxjava2:2.12.0")
+    //noinspection NewerVersionAvailable
     implementation("com.squareup.retrofit2:converter-gson:2.12.0")
 
     // okhttp
-    @Suppress("GradleDependency")
+    //noinspection NewerVersionAvailable
     implementation("com.squareup.okhttp3:logging-interceptor:3.14.9")
 
     // etc
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.google.android.material:material:1.13.0")
+    implementation("com.github.bumptech.glide:glide:5.0.7")
 
     // crash reporting
-    add("playImplementation", "ch.acra:acra-http:5.12.0")
+    add("playImplementation", "ch.acra:acra-http:5.13.1")
 
     // tests
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
     androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
 }
 

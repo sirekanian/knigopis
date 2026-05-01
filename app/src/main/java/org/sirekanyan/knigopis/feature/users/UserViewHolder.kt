@@ -36,6 +36,7 @@ class UserViewHolder(
     override fun onBind(position: Int, model: UserModel) {
         userImage.setCircleImage(model.image)
         userNickname.text = model.name
+        @Suppress("SetTextI18n")
         totalBooksCount.text = model.booksCount?.toString()
         newBooksCount.text = model.newBooksCountFormatted
     }

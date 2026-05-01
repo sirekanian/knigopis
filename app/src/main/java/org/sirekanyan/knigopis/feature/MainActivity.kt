@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
+import androidx.core.net.toUri
 import org.sirekanyan.knigopis.R
 import org.sirekanyan.knigopis.common.BaseActivity
 import org.sirekanyan.knigopis.common.extensions.app
@@ -65,7 +66,7 @@ class MainActivity : BaseActivity(),
         presenter.start()
         intent.data?.also { userUrl ->
             intent.data = null
-            val normalizedUri = Uri.parse(userUrl.toString().replaceFirst("/#/", "/"))
+            val normalizedUri = userUrl.toString().replaceFirst("/#/", "/").toUri()
             normalizedUri.getQueryParameter("u")?.let { userId ->
                 api.getUser(userId)
                     .io2main()

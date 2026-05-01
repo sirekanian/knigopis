@@ -1,6 +1,7 @@
 package org.sirekanyan.knigopis.repository
 
 import android.content.Context
+import androidx.core.content.edit
 
 private const val PREFS_NAME = "knigopis"
 private const val TOKEN_KEY = "token"
@@ -18,14 +19,14 @@ class TokenStorageImpl(context: Context) : TokenStorage {
 
     override var token: String?
         get() = preferences.getString(TOKEN_KEY, null)
-        set(value) = preferences.edit().putString(TOKEN_KEY, value).apply()
+        set(value) = preferences.edit { putString(TOKEN_KEY, value) }
 
     override var accessToken: String?
         get() = preferences.getString(ACCESS_TOKEN_KEY, null)
-        set(value) = preferences.edit().putString(ACCESS_TOKEN_KEY, value).apply()
+        set(value) = preferences.edit { putString(ACCESS_TOKEN_KEY, value) }
 
     override fun clearTokens() {
-        preferences.edit().remove(TOKEN_KEY).remove(ACCESS_TOKEN_KEY).apply()
+        preferences.edit { remove(TOKEN_KEY).remove(ACCESS_TOKEN_KEY) }
     }
 
 }

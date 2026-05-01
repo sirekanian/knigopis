@@ -114,8 +114,11 @@ class BookViewImpl(
     }
 
     override fun setBookDate(year: Int?, month: Int?, day: Int?) {
+        @Suppress("SetTextI18n")
         yearEditText.setText(year?.toString().orEmpty())
+        @Suppress("SetTextI18n")
         monthEditText.setText(month?.toString().orEmpty())
+        @Suppress("SetTextI18n")
         dayEditText.setText(day?.toString().orEmpty())
     }
 

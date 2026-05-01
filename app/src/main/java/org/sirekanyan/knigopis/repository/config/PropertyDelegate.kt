@@ -3,6 +3,7 @@ package org.sirekanyan.knigopis.repository.config
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import android.util.Log
+import androidx.core.content.edit
 import org.sirekanyan.knigopis.repository.ConfigurationImpl
 import kotlin.reflect.KProperty
 
@@ -15,9 +16,9 @@ class PreferenceDelegate<T>(
         config.prefs.load(prop.name)
 
     operator fun setValue(config: ConfigurationImpl, prop: KProperty<*>, value: T) {
-        val editor = config.prefs.edit()
-        editor.save(prop.name, value)
-        editor.apply()
+        config.prefs.edit {
+            save(prop.name, value)
+        }
     }
 
 }

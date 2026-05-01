@@ -3,7 +3,7 @@ package org.sirekanyan.knigopis.model
 import androidx.annotation.IdRes
 import org.sirekanyan.knigopis.R
 
-enum class CurrentTab(@IdRes val itemId: Int) {
+enum class CurrentTab(@all:IdRes val itemId: Int) {
 
     BOOKS_TAB(R.id.navigation_home),
     USERS_TAB(R.id.navigation_users),
@@ -11,6 +11,6 @@ enum class CurrentTab(@IdRes val itemId: Int) {
 
     companion object {
         fun getByItemId(@IdRes itemId: Int) =
-            checkNotNull(values().find { it.itemId == itemId })
+            checkNotNull(entries.find { it.itemId == itemId })
     }
 }

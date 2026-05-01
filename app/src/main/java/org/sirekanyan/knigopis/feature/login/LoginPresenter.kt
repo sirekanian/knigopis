@@ -23,7 +23,7 @@ class LoginPresenterImpl(private val router: Router) : BasePresenter<LoginView>(
     LoginView.Callbacks {
 
     override fun init() {
-        Website.values().forEach { website ->
+        Website.entries.forEach { website ->
             view.addWebsite(website)
         }
     }

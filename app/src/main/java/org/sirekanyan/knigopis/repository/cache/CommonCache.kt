@@ -2,6 +2,7 @@ package org.sirekanyan.knigopis.repository.cache
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
+import androidx.core.content.edit
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
@@ -43,9 +44,9 @@ class CommonCacheImpl(
 
     override fun <T> save(key: CacheKey, books: List<T>): Completable =
         Completable.fromAction {
-            prefs.edit()
-                .putString(key.storeValue, gson.toJson(books))
-                .apply()
+            prefs.edit {
+                putString(key.storeValue, gson.toJson(books))
+            }
         }
 
 }

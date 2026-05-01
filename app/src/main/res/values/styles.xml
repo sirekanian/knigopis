@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.Knigopis" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/knigopis_color_primary</item>
@@ -18,6 +18,7 @@
         <item name="actionOverflowButtonStyle">@style/Widget.Knigopis.ActionButton.Overflow</item>
         <item name="android:statusBarColor">?colorPrimaryVariant</item>
         <item name="android:navigationBarColor">@color/common_grey_950</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:ignore="NewApi">true</item>
     </style>
 
     <style name="Theme.Knigopis.Splash" parent="Theme.Knigopis">

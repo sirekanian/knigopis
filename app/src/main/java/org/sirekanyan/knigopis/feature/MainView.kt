@@ -5,6 +5,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.edit
 import org.sirekanyan.knigopis.BuildConfig
 import org.sirekanyan.knigopis.R
 import org.sirekanyan.knigopis.common.android.menu.OptionItem
@@ -19,7 +20,9 @@ import org.sirekanyan.knigopis.common.extensions.show
 import org.sirekanyan.knigopis.databinding.ActivityMainBinding
 import org.sirekanyan.knigopis.isPlayFlavor
 import org.sirekanyan.knigopis.model.CurrentTab
-import org.sirekanyan.knigopis.model.CurrentTab.*
+import org.sirekanyan.knigopis.model.CurrentTab.BOOKS_TAB
+import org.sirekanyan.knigopis.model.CurrentTab.NOTES_TAB
+import org.sirekanyan.knigopis.model.CurrentTab.USERS_TAB
 import org.sirekanyan.knigopis.repository.BookSorting
 import org.sirekanyan.knigopis.repository.Theme
 import org.sirekanyan.knigopis.repository.UserSorting
@@ -72,9 +75,9 @@ class MainViewImpl(
 
     init {
         toolbar.inflateMenu(R.menu.options)
-        toolbar.menu.findItem(R.id.option_sort_books).addAll(BookSorting.values())
-        toolbar.menu.findItem(R.id.option_sort_users).addAll(UserSorting.values())
-        val themeOptions = Theme.values().map(Theme::id)
+        toolbar.menu.findItem(R.id.option_sort_books).addAll(BookSorting.entries)
+        toolbar.menu.findItem(R.id.option_sort_users).addAll(UserSorting.entries)
+        val themeOptions = Theme.entries.map(Theme::id)
         toolbar.setOnMenuItemClickListener { item ->
             when (val itemId = item.itemId) {
                 R.id.option_login -> {
@@ -111,8 +114,7 @@ class MainViewImpl(
                 }
                 R.id.debug_option_clear_cache -> {
                     context.cacheDir.deleteRecursively()
-                    context.getSharedPreferences(COMMON_PREFS_NAME, MODE_PRIVATE)
-                        .edit().clear().apply()
+                    context.getSharedPreferences(COMMON_PREFS_NAME, MODE_PRIVATE).edit { clear() }
                     true
                 }
                 R.id.debug_option_toggle_theme -> {
