@@ -1,4 +1,4 @@
-package org.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login.u
 
 import android.net.Uri
 import org.sirekanyan.knigopis.BuildConfig.*

@@ -1,8 +1,8 @@
-package org.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login.u
 
 import org.sirekanyan.knigopis.common.BasePresenter
 import org.sirekanyan.knigopis.common.Presenter
-import org.sirekanyan.knigopis.feature.login.LoginPresenter.Router
+import org.sirekanyan.knigopis.feature.login.u.LoginPresenter.Router
 
 interface LoginPresenter : Presenter {
 

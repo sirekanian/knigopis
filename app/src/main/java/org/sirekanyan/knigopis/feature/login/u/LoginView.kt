@@ -1,4 +1,4 @@
-package org.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login.u
 
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -8,9 +8,9 @@ import org.sirekanyan.knigopis.R
 import org.sirekanyan.knigopis.common.android.toast.CommonView
 import org.sirekanyan.knigopis.common.extensions.context
 import org.sirekanyan.knigopis.common.extensions.inflate
-import org.sirekanyan.knigopis.databinding.LoginActivityBinding
+import org.sirekanyan.knigopis.databinding.LoginLegacyActivityBinding
 
-interface LoginView : CommonView<LoginActivityBinding> {
+interface LoginView : CommonView<LoginLegacyActivityBinding> {
 
     fun addWebsite(website: Website)
     fun showNoBrowserDialog()
@@ -26,7 +26,7 @@ interface LoginView : CommonView<LoginActivityBinding> {
 }
 
 class LoginViewImpl(
-    override val binding: LoginActivityBinding,
+    override val binding: LoginLegacyActivityBinding,
     private val callbacks: LoginView.Callbacks,
 ) : LoginView {
 

@@ -1,4 +1,4 @@
-package org.sirekanyan.knigopis.feature.login
+package org.sirekanyan.knigopis.feature.login.u
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -11,7 +11,7 @@ import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import org.sirekanyan.knigopis.common.extensions.app
-import org.sirekanyan.knigopis.databinding.LoginActivityBinding
+import org.sirekanyan.knigopis.databinding.LoginLegacyActivityBinding
 import org.sirekanyan.knigopis.dependency.providePresenter
 import org.sirekanyan.knigopis.feature.startMainActivity
 
@@ -24,7 +24,7 @@ fun Context.startLoginActivity() {
 
 class LoginActivity : AppCompatActivity(), LoginPresenter.Router {
 
-    val binding by lazy { LoginActivityBinding.inflate(layoutInflater) }
+    val binding by lazy { LoginLegacyActivityBinding.inflate(layoutInflater) }
     private val presenter by lazy { providePresenter() }
     private val auth by lazy { app.authRepository }
 
