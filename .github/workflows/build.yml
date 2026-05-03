@@ -15,7 +15,7 @@ jobs:
       - shell: bash
         run: ./gradlew lintPlayDebug
       - if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: app/build/reports/lint-results-*.html
   assemble:
@@ -63,6 +63,6 @@ jobs:
           ACRA_PASSWORD: ${{ secrets.ACRA_PASSWORD }}
         run: ./gradlew connectedPlayAndroidTest
       - if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: app/build/reports/androidTests/connected/**/*.html
