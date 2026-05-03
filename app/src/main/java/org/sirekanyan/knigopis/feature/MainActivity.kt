@@ -1,7 +1,6 @@
 package org.sirekanyan.knigopis.feature
 
 import android.content.ActivityNotFoundException
-import android.content.Context
 import android.content.Intent
 import android.content.Intent.*
 import android.net.Uri
@@ -27,13 +26,6 @@ import org.sirekanyan.knigopis.feature.users.UsersPresenter
 import org.sirekanyan.knigopis.feature.users.getMainState
 import org.sirekanyan.knigopis.feature.users.saveMainState
 import org.sirekanyan.knigopis.model.*
-
-fun Context.startMainActivity() {
-    startActivity(
-        Intent(this, MainActivity::class.java)
-            .setFlags(FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK)
-    )
-}
 
 class MainActivity : BaseActivity(),
     MainPresenter.Router,

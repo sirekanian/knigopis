@@ -51,20 +51,6 @@
     <string name="signup.error.passwords_do_not_match">Пароли не совпадают</string>
     <string name="signup.option.login">У меня есть аккаунт</string>
 
-    <!-- login (legacy) -->
-    <string name="login.website.vk">Вконтакте</string>
-    <string name="login.website.go">Google</string>
-    <string name="login.website.fb">Фейсбук</string>
-    <string name="login.website.mr">Mail.ru</string>
-    <string name="login.website.ya">Яндекс</string>
-    <string name="login.website.tw">Твиттер</string>
-    <string name="login.website.in">Инстаграм</string>
-    <string name="login.browser.title">Не найден браузер</string>
-    <array name="login.browsers">
-        <item>Установить Firefox</item>
-        <item>Установить Chrome</item>
-    </array>
-
     <!-- about -->
     <string name="about.text.idea">API:\nhttps://www.knigopis.com</string>
     <string name="about.text.developer">Разработка:\nvadik@sirekanyan.org</string>

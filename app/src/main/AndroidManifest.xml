@@ -52,21 +52,7 @@
             android:theme="@style/Theme.Knigopis.Profile"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
 
-        <activity
-            android:name=".feature.login.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="${LOGIN_CALLBACK_HOST}"
-                    android:path="/${LOGIN_CALLBACK_PATH}"
-                    android:scheme="${LOGIN_CALLBACK_SCHEME}" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".feature.login.LoginActivity" />
 
     </application>
 

@@ -10,8 +10,6 @@ interface AuthRepository {
     fun login(username: String, password: String): Completable
     fun register(username: String, password: String): Completable
     fun isAuthorized(): Boolean
-    fun saveToken(token: String)
-    fun authorize(): Completable
 }
 
 class AuthRepositoryImpl(
@@ -42,23 +40,4 @@ class AuthRepositoryImpl(
 
     override fun isAuthorized(): Boolean =
         storage.accessToken != null
-
-    override fun saveToken(token: String) {
-        storage.token = token
-    }
-
-    override fun authorize(): Completable {
-        val token = storage.token
-        return if (token == null || isAuthorized()) {
-            Completable.complete()
-        } else {
-            api.getCredentials(token)
-                .io2main()
-                .doOnSuccess {
-                    storage.accessToken = it.accessToken
-                }
-                .ignoreElement()
-        }
-    }
-
 }

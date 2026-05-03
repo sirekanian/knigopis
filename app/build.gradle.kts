@@ -34,12 +34,6 @@ android {
         targetSdk = 35
         versionName = appVersionName
         versionCode = appVersionCode.toInt()
-        manifestPlaceholders["LOGIN_CALLBACK_SCHEME"] = "e270636c0efc6cad95130113d3bbafc3"
-        manifestPlaceholders["LOGIN_CALLBACK_HOST"] = "532b8e7fc54c52b6df5b55181acc241a"
-        manifestPlaceholders["LOGIN_CALLBACK_PATH"] = "$versionCode"
-        manifestPlaceholders.forEach { (key, value) ->
-            buildConfigField("String", key, "\"$value\"")
-        }
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         System.getenv("TEST_TOKEN")?.let {
