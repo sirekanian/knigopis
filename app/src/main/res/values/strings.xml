@@ -1,7 +1,7 @@
 <resources>
     <!-- common -->
     <string name="common.title.app">Knigopis</string>
-    <string name="common.error.network">Check your network connection</string>
+    <string name="common.error.unknown">Something went wrong</string>
     <string name="common.button.cancel">Cancel</string>
     <string name="common.info.dev">We Present A SPECIAL PRESENTATION</string>
     <plurals name="common.header.books">
@@ -18,7 +18,7 @@
     <string name="main.error.unauthorized">Please log in</string>
 
     <!-- main menu -->
-    <string name="main.option.login">Login</string>
+    <string name="main.option.login">Log in</string>
     <string name="main.option.profile">Profile</string>
     <string name="main.option.about">About</string>
     <string name="main_option_sort">Sort</string>
@@ -37,7 +37,20 @@
     <string name="main.option.crash_report">Crash reporting</string>
 
     <!-- login -->
-    <string name="login.title">Log in with…</string>
+    <string name="login.title">Log in</string>
+    <string name="login.hint.username">Username</string>
+    <string name="login.hint.password">Password</string>
+    <string name="login.button">Log in</string>
+    <string name="login.option.signup">Sign up</string>
+
+    <!-- signup -->
+    <string name="signup.title">Sign up</string>
+    <string name="signup.hint.password_repeat">Repeat password</string>
+    <string name="signup.button">Sign up</string>
+    <string name="signup.error.passwords_do_not_match">Passwords don\'t match</string>
+    <string name="signup.option.login">Log in</string>
+
+    <!-- login (legacy) -->
     <string name="login.website.vk">VKontakte</string>
     <string name="login.website.go">Google</string>
     <string name="login.website.fb">Facebook</string>

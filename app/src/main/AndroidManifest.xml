@@ -53,7 +53,7 @@
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
 
         <activity
-            android:name=".feature.login.u.LoginActivity"
+            android:name=".feature.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

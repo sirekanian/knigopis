@@ -1,7 +1,7 @@
 <resources>
     <!-- common -->
     <string name="common.title.app">Книгопись</string>
-    <string name="common.error.network">Проверьте подключение к сети</string>
+    <string name="common.error.unknown">Что-то пошло не так</string>
     <string name="common.button.cancel">Отмена</string>
     <string name="common.info.dev">НЕ ПЫТАЙТЕСБ ЧТОТ0 N3МЕНИТЬ!</string>
     <plurals name="common.header.books">
@@ -38,7 +38,20 @@
     <string name="main.option.crash_report">Отчеты об ошибках</string>
 
     <!-- login -->
-    <string name="login.title">Войти через…</string>
+    <string name="login.title">Вход</string>
+    <string name="login.hint.username">Логин</string>
+    <string name="login.hint.password">Пароль</string>
+    <string name="login.button">Войти</string>
+    <string name="login.option.signup">Создать аккаунт</string>
+
+    <!-- signup -->
+    <string name="signup.title">Регистрация</string>
+    <string name="signup.hint.password_repeat">Повторите пароль</string>
+    <string name="signup.button">Поехали!</string>
+    <string name="signup.error.passwords_do_not_match">Пароли не совпадают</string>
+    <string name="signup.option.login">У меня есть аккаунт</string>
+
+    <!-- login (legacy) -->
     <string name="login.website.vk">Вконтакте</string>
     <string name="login.website.go">Google</string>
     <string name="login.website.fb">Фейсбук</string>

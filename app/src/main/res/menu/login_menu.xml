@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/option_log_in"
+        android:title="@string/signup.option.login"
+        android:visible="false"
+        app:showAsAction="never"
+        tools:visible="true" />
+
+    <item
+        android:id="@+id/option_sign_up"
+        android:title="@string/login.option.signup"
+        android:visible="false"
+        app:showAsAction="never"
+        tools:visible="true" />
+
+</menu>

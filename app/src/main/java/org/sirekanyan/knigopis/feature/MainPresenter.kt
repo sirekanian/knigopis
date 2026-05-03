@@ -57,11 +57,6 @@ class MainPresenterImpl(
     }
 
     override fun resume() {
-        auth.authorize().bind({
-            refreshButtons()
-        }, {
-            logError("cannot check credentials", it)
-        })
         if (booksChanged) {
             booksChanged = false
             refresh(isForce = true)

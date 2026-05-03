@@ -27,5 +27,5 @@ private val Throwable.messageRes
     get() = if (this is HttpException && code() == 401) {
         R.string.main_error_unauthorized
     } else {
-        R.string.common_error_network
+        R.string.common_error_unknown
     }

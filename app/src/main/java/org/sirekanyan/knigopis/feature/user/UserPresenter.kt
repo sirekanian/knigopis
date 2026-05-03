@@ -85,7 +85,7 @@ class UserPresenterImpl(
                 view.setFabSelected(true)
             }, {
                 logError("Cannot update subscription", it)
-                view.snackbar(R.string.common_error_network)
+                view.snackbar(R.string.common_error_unknown)
                 view.setFabSelected(false)
             })
     }

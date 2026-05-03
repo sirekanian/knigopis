@@ -7,6 +7,12 @@ import retrofit2.http.*
 
 interface Endpoint {
 
+    @POST("auth/login")
+    fun login(@Body user: UserToSend): Single<Credentials>
+
+    @POST("auth/register")
+    fun register(@Body user: UserToSend): Single<Credentials>
+
     @GET("user/get-credentials")
     fun getCredentials(@Query("token") token: String): Single<Credentials>
 

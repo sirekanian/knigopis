@@ -19,7 +19,7 @@ import org.sirekanyan.knigopis.databinding.ActivityMainBinding
 import org.sirekanyan.knigopis.dependency.providePresenter
 import org.sirekanyan.knigopis.feature.book.createBookIntent
 import org.sirekanyan.knigopis.feature.books.BooksPresenter
-import org.sirekanyan.knigopis.feature.login.u.startLoginActivity
+import org.sirekanyan.knigopis.feature.login.startLoginActivity
 import org.sirekanyan.knigopis.feature.notes.NotesPresenter
 import org.sirekanyan.knigopis.feature.profile.createProfileIntent
 import org.sirekanyan.knigopis.feature.user.createUserIntent
